@@ -928,8 +928,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_FAMILY_POOCHYENA
     [SPECIES_POOCHYENA] =
     {
-        .baseHP        = 35,
-        .baseAttack    = 55,
+        .baseHP        = 45,
+        .baseAttack    = 60,
         .baseDefense   = 35,
         .baseSpeed     = 35,
         .baseSpAttack  = 30,
@@ -950,7 +950,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_RUN_AWAY, ABILITY_QUICK_FEET, ABILITY_RATTLED },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_MOXIE, ABILITY_RATTLED },
     #else
         .abilities = { ABILITY_RUN_AWAY, ABILITY_NONE, ABILITY_RATTLED },
     #endif
@@ -1007,8 +1007,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_MIGHTYENA] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 90,
+        .baseHP        = 85,
+        .baseAttack    = 105,
         .baseDefense   = 70,
         .baseSpeed     = 70,
         .baseSpAttack  = 60,
@@ -1023,7 +1023,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_QUICK_FEET, ABILITY_MOXIE },
+        .abilities = { ABILITY_INTIMIDATE, ABILITY_MOXIE, ABILITY_QUICK_FEET },
     #else
         .abilities = { ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_MOXIE },
     #endif
@@ -1084,10 +1084,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 38,
         .baseAttack    = 30,
-        .baseDefense   = 41,
+        .baseDefense   = 51,
         .baseSpeed     = 60,
         .baseSpAttack  = 30,
-        .baseSpDefense = 41,
+        .baseSpDefense = 46,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 255,
     #if P_UPDATED_EXP_YIELDS >= GEN_6
@@ -1106,7 +1106,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_QUICK_FEET, ABILITY_DEFIANT, ABILITY_GLUTTONY },
     #else
         .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_QUICK_FEET },
     #endif
@@ -1167,11 +1167,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_LINOONE] =
     {
         .baseHP        = 78,
-        .baseAttack    = 70,
-        .baseDefense   = 61,
+        .baseAttack    = 75,
+        .baseDefense   = 76,
         .baseSpeed     = 100,
         .baseSpAttack  = 50,
-        .baseSpDefense = 61,
+        .baseSpDefense = 71,
         .types = MON_TYPES(TYPE_NORMAL),
         .catchRate = 90,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 147 : 128,
@@ -1184,7 +1184,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_4
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_QUICK_FEET, ABILITY_DEFIANT, ABILITY_GLUTTONY },
     #else
         .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_QUICK_FEET },
     #endif
@@ -1245,10 +1245,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 38,
         .baseAttack    = 30,
-        .baseDefense   = 41,
+        .baseDefense   = 51,
         .baseSpeed     = 60,
         .baseSpAttack  = 30,
-        .baseSpDefense = 41,
+        .baseSpDefense = 46,
         .types = MON_TYPES(TYPE_DARK, TYPE_NORMAL),
         .catchRate = 255,
         .expYield = 56,
@@ -1258,7 +1258,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_QUICK_FEET, ABILITY_DEFIANT, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Zigzagoon"),
         .cryId = CRY_ZIGZAGOON,
@@ -1311,11 +1311,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_LINOONE_GALAR] =
     {
         .baseHP        = 78,
-        .baseAttack    = 70,
-        .baseDefense   = 61,
+        .baseAttack    = 75,
+        .baseDefense   = 76,
         .baseSpeed     = 100,
         .baseSpAttack  = 50,
-        .baseSpDefense = 61,
+        .baseSpDefense = 71,
         .types = MON_TYPES(TYPE_DARK, TYPE_NORMAL),
         .catchRate = 90,
         .expYield = 147,
@@ -1325,7 +1325,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
+        .abilities = { ABILITY_QUICK_FEET, ABILITY_DEFIANT, ABILITY_GLUTTONY },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Linoone"),
         .cryId = CRY_LINOONE,
@@ -1391,7 +1391,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_RECKLESS, ABILITY_GUTS, ABILITY_DEFIANT },
+        .abilities = { ABILITY_SHEER_FORCE, ABILITY_DEFIANT, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Obstagoon"),
         .cryId = CRY_OBSTAGOON,
