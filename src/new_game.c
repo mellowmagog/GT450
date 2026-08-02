@@ -212,6 +212,7 @@ void NewGameInitData(void)
     ResetLotteryCorner();
     UpdateDailySeed();
     WarpToTruck();
+	AddBagItem(ITEM_INFINITE_CANDY_BAG, 1);
     if (IS_FRLG)
         RunScriptImmediately(EventScript_ResetAllMapFlagsFrlg);
     else

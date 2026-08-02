@@ -231,11 +231,31 @@ Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 11
+Ability: Intimidate
+- Bite
+- Swagger
+- Scary Face
+- Howl
+
+Duskull
+Level: 10
+Ability: Levitate
+- Will O Wisp
+- Hex
+- Disable
+- Confuse Ray
+
+Corphish @ Mystic Water
+Level: 12
+Ability: Adaptability
+- Knock Off
+- Bubble Beam
+- Clamp
+- Harden
 
 === TRAINER_MARCEL ===
 Name: MARCEL
@@ -4796,32 +4816,45 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
-Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
+Aerodactyl @ Smooth Rock
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
+Ability: Pressure
+Nature: Timid
+- Sandstorm
+- Wing Attack
+- Supersonic
 - Rock Tomb
 
-Geodude
-Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+Nacli @ Passho Berry
+Level: 13
+Ability: Purifying Salt
+Ball: Premier
+- Sandstorm
+- Shore Up
+- Salt Cure
+- Mud Shot
+
+Tirtouga @ Rindo Berry
+Level: 13
+Ability: Solid Rock
+Ball: Dive
+Nature: Careful
+- Aqua Jet
+- Withdraw
+- Smack Down
+- Water Pulse
 
 Nosepass @ Oran Berry
 Level: 15
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Ability: Magnet Pull
+Ball: Great
+Nature: Bold
 - Block
 - Harden
-- Tackle
+- Thunder Shock
 - Rock Tomb
 
 === TRAINER_BRAWLY_1 ===
@@ -9513,9 +9546,9 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Bounsweet
 Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
@@ -9568,9 +9601,9 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Torchic
+Koffing
 Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -9623,9 +9656,9 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Trapinch
 Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
@@ -9678,9 +9711,9 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Bounsweet
 Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
@@ -9733,9 +9766,9 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Torchic
+Koffing
 Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
@@ -9788,9 +9821,9 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Trapinch
 Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY

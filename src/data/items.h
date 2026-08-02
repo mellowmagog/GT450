@@ -2049,6 +2049,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_RareCandy,
         .iconPalette = gItemIconPalette_RareCandy,
     },
+	
+	[ITEM_INFINITE_CANDY_BAG] =
+    {
+        .name = ITEM_NAME("Infinite Candy Bag"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Continually raises\n"
+            "the level of a\n"
+            "Pokémon until cap."),
+        .pocket = POCKET_KEY_ITEMS,
+        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
+    },
+
 
     [ITEM_EXP_CANDY_XS] =
     {

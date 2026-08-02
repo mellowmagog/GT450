@@ -1892,7 +1892,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_SHED_SKIN, ABILITY_SHIELD_DUST, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Burmy"),
         .cryId = CRY_BURMY,
@@ -1961,7 +1961,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_SHED_SKIN, ABILITY_SHIELD_DUST, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Burmy"),
         .cryId = CRY_BURMY,
@@ -2030,7 +2030,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_SHED_SKIN, ABILITY_SHIELD_DUST, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Burmy"),
         .cryId = CRY_BURMY,
@@ -2086,10 +2086,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     {
         .baseHP        = 60,
         .baseAttack    = 59,
-        .baseDefense   = 85,
+        .baseDefense   = 98,
         .baseSpeed     = 36,
         .baseSpAttack  = 79,
-        .baseSpDefense = 105,
+        .baseSpDefense = 118,
         .types = MON_TYPES(TYPE_BUG, TYPE_GRASS),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
@@ -2100,7 +2100,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_ANTICIPATION, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_FILTER, ABILITY_ADAPTABILITY, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Wormadam"),
         .cryId = CRY_WORMADAM,
@@ -2152,10 +2152,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     {
         .baseHP        = 60,
         .baseAttack    = 79,
-        .baseDefense   = 105,
+        .baseDefense   = 118,
         .baseSpeed     = 36,
         .baseSpAttack  = 59,
-        .baseSpDefense = 85,
+        .baseSpDefense = 98,
         .types = MON_TYPES(TYPE_BUG, TYPE_GROUND),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,
@@ -2166,7 +2166,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_ANTICIPATION, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_FILTER, ABILITY_ADAPTABILITY, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Wormadam"),
         .cryId = CRY_WORMADAM,
@@ -2216,7 +2216,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_TRASH] =
     {
-        .baseHP        = 60,
+        .baseHP        = 86,
         .baseAttack    = 69,
         .baseDefense   = 95,
         .baseSpeed     = 36,
@@ -2233,7 +2233,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-        .abilities = { ABILITY_ANTICIPATION, ABILITY_NONE, ABILITY_OVERCOAT },
+        .abilities = { ABILITY_FILTER, ABILITY_ADAPTABILITY, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Wormadam"),
         .cryId = CRY_WORMADAM,
@@ -2281,67 +2281,67 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .formSpeciesIdTable = sWormadamFormSpeciesIdTable,
     },
 
-#define MOTHIM_SPECIES_INFO                                                 \
-    {                                                                       \
-        .baseHP        = 70,                                                \
-        .baseAttack    = 94,                                                \
-        .baseDefense   = 50,                                                \
-        .baseSpeed     = 66,                                                \
-        .baseSpAttack  = 94,                                                \
-        .baseSpDefense = 50,                                                \
-        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),                          \
-        .catchRate = 45,                                                    \
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,            \
-        .evYield_Attack = 0,                                                \
-        .evYield_SpAttack = 0,                                              \
-        .itemRare = ITEM_SILVER_POWDER,                                     \
-        .genderRatio = MON_MALE,                                            \
-        .eggCycles = 15,                                                    \
-        .friendship = STANDARD_FRIENDSHIP,                                  \
-        .growthRate = GROWTH_MEDIUM_FAST,                                   \
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                         \
-        .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TINTED_LENS },  \
-        .bodyColor = BODY_COLOR_YELLOW,                                     \
-        .speciesName = _("Mothim"),                                         \
-        .cryId = CRY_MOTHIM,                                                \
-        .natDexNum = NATIONAL_DEX_MOTHIM,                                   \
-        .categoryName = _("Moth"),                                          \
-        .height = 9,                                                        \
-        .weight = 233,                                                      \
-        .description = gMothimPokedexText,                                  \
-        .pokemonScale = 338,                                                \
-        .pokemonOffset = 8,                                                 \
-        .trainerScale = 256,                                                \
-        .trainerOffset = 0,                                                 \
-        .frontPic = gMonFrontPic_Mothim,                                    \
-        .frontPicSize = MON_COORDS_SIZE(64, 64),                            \
-        .frontPicYOffset = 12,                                              \
-        .frontAnimFrames = sAnims_Mothim,                                   \
-        .frontAnimId = ANIM_H_SLIDE_WOBBLE,                                 \
-        .enemyMonElevation = 10,                                            \
-        .backPic = gMonBackPic_Mothim,                                      \
-        .backPicSize = MON_COORDS_SIZE(64, 56),                             \
-        .backPicYOffset = 8,                                                \
-        .backAnimId = BACK_ANIM_H_SHAKE,                                    \
-        .palette = gMonPalette_Mothim,                                      \
-        .shinyPalette = gMonShinyPalette_Mothim,                            \
-        .iconSprite = gMonIcon_Mothim,                                      \
-        .iconPalIndex = 0,                                                  \
-        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                             \
-        SHADOW(-1, 9, SHADOW_SIZE_S)                                        \
-        FOOTPRINT(Mothim)                                                   \
-        OVERWORLD(                                                          \
-            sPicTable_Mothim,                                               \
-            SIZE_32x32,                                                     \
-            SHADOW_SIZE_M,                                                  \
-            TRACKS_FOOT,                                                    \
-            sAnimTable_Following,                                           \
-            gOverworldPalette_Mothim,                                       \
-            gShinyOverworldPalette_Mothim                                   \
-        )                                                                   \
-        .levelUpLearnset = sMothimLevelUpLearnset,                          \
-        .teachableLearnset = sMothimTeachableLearnset,                      \
-        .formSpeciesIdTable = sMothimFormSpeciesIdTable,                    \
+#define MOTHIM_SPECIES_INFO                                                          \
+    {                                                                                \
+        .baseHP        = 76,                                                         \
+        .baseAttack    = 104,                                                        \
+        .baseDefense   = 50,                                                         \
+        .baseSpeed     = 66,                                                         \
+        .baseSpAttack  = 104,                                                        \
+        .baseSpDefense = 50,                                                         \
+        .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),                                   \
+        .catchRate = 45,                                                             \
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 148 : 159,                     \
+        .evYield_Attack = 0,                                                         \
+        .evYield_SpAttack = 0,                                                       \
+        .itemRare = ITEM_SILVER_POWDER,                                              \
+        .genderRatio = MON_MALE,                                                     \
+        .eggCycles = 15,                                                             \
+        .friendship = STANDARD_FRIENDSHIP,                                           \
+        .growthRate = GROWTH_MEDIUM_FAST,                                            \
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                                  \
+        .abilities = { ABILITY_COMPOUND_EYES, ABILITY_TINTED_LENS, ABILITY_SWARM },  \
+        .bodyColor = BODY_COLOR_YELLOW,                                              \
+        .speciesName = _("Mothim"),                                                  \
+        .cryId = CRY_MOTHIM,                                                         \
+        .natDexNum = NATIONAL_DEX_MOTHIM,                                            \
+        .categoryName = _("Moth"),                                                   \
+        .height = 9,                                                                 \
+        .weight = 233,                                                               \
+        .description = gMothimPokedexText,                                           \
+        .pokemonScale = 338,                                                         \
+        .pokemonOffset = 8,                                                          \
+        .trainerScale = 256,                                                         \
+        .trainerOffset = 0,                                                          \
+        .frontPic = gMonFrontPic_Mothim,                                             \
+        .frontPicSize = MON_COORDS_SIZE(64, 64),                                     \
+        .frontPicYOffset = 12,                                                       \
+        .frontAnimFrames = sAnims_Mothim,                                            \
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,                                          \
+        .enemyMonElevation = 10,                                                     \
+        .backPic = gMonBackPic_Mothim,                                               \
+        .backPicSize = MON_COORDS_SIZE(64, 56),                                      \
+        .backPicYOffset = 8,                                                         \
+        .backAnimId = BACK_ANIM_H_SHAKE,                                             \
+        .palette = gMonPalette_Mothim,                                               \
+        .shinyPalette = gMonShinyPalette_Mothim,                                     \
+        .iconSprite = gMonIcon_Mothim,                                               \
+        .iconPalIndex = 0,                                                           \
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,                                      \
+        SHADOW(-1, 9, SHADOW_SIZE_S)                                                 \
+        FOOTPRINT(Mothim)                                                            \
+        OVERWORLD(                                                                   \
+            sPicTable_Mothim,                                                        \
+            SIZE_32x32,                                                              \
+            SHADOW_SIZE_M,                                                           \
+            TRACKS_FOOT,                                                             \
+            sAnimTable_Following,                                                    \
+            gOverworldPalette_Mothim,                                                \
+            gShinyOverworldPalette_Mothim                                            \
+        )                                                                            \
+        .levelUpLearnset = sMothimLevelUpLearnset,                                   \
+        .teachableLearnset = sMothimTeachableLearnset,                               \
+        .formSpeciesIdTable = sMothimFormSpeciesIdTable,                             \
     }
 
     [SPECIES_MOTHIM_PLANT] = MOTHIM_SPECIES_INFO,
@@ -3769,7 +3769,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_STENCH, ABILITY_AFTERMATH, ABILITY_KEEN_EYE },
+        .abilities = { ABILITY_STENCH, ABILITY_KEEN_EYE, ABILITY_AFTERMATH },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Stunky"),
         .cryId = CRY_STUNKY,
@@ -3840,7 +3840,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_STENCH, ABILITY_AFTERMATH, ABILITY_KEEN_EYE },
+        .abilities = { ABILITY_STENCH, ABILITY_ARMOR_TAIL, ABILITY_AFTERMATH },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Skuntank"),
         .cryId = CRY_SKUNTANK,
@@ -5209,7 +5209,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = 100,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_ANTICIPATION, ABILITY_DRY_SKIN, ABILITY_POISON_TOUCH },
+        .abilities = { ABILITY_DRY_SKIN, ABILITY_POISON_TOUCH, ABILITY_ANTICIPATION },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Croagunk"),
         .cryId = CRY_CROAGUNK,
@@ -5293,7 +5293,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_ANTICIPATION, ABILITY_DRY_SKIN, ABILITY_POISON_TOUCH },
+        .abilities = { ABILITY_DRY_SKIN, ABILITY_POISON_TOUCH, ABILITY_ANTICIPATION },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Toxicroak"),
         .cryId = CRY_TOXICROAK,
