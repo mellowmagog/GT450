@@ -234,7 +234,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Poochyena
-Level: 11
+Level: 12
 Ability: Intimidate
 - Bite
 - Swagger
@@ -242,7 +242,7 @@ Ability: Intimidate
 - Howl
 
 Duskull
-Level: 10
+Level: 11
 Ability: Levitate
 - Will O Wisp
 - Hex
@@ -250,7 +250,7 @@ Ability: Levitate
 - Confuse Ray
 
 Corphish @ Mystic Water
-Level: 12
+Level: 13
 Ability: Adaptability
 - Knock Off
 - Bubble Beam
@@ -2143,11 +2143,28 @@ Gender: Female
 Music: Female
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Zigzagoon @ Nugget
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon @ King's Rock
+Level: 12
+Nature: Jolly
+- Headbutt
+
+Luvdisc
+Level: 12
+- Water Pulse
+- Charm
+- Aqua Ring
+
+Buneary
+Level: 12
+- Baby Doll Eyes
+- Double Kick
+- Pound
+
+Espurr
+Level: 13
+- Pay Day
 
 === TRAINER_DAPHNE ===
 Name: DAPHNE
@@ -2547,11 +2564,20 @@ Gender: Male
 Music: Rich
 Items: Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Zigzagoon @ Nugget
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shinx
+Level: 12
+
+Aipom
+Level: 12
+
+Lillipup
+Level: 13
+
+Mankey
+Level: 13
+- Pay Day
 
 === TRAINER_MOLLIE ===
 Name: MOLLIE
@@ -4819,23 +4845,37 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
+Glimmet @ Focus Sash
+Level: 13
+Ability: Toxic Debris
+Nature: Modest
+- Acid Spray
+- Ancient Power
+- Self Destruct
+
 Aerodactyl @ Smooth Rock
 Level: 12
-Ability: Pressure
+Ability: Unnerve
 Nature: Timid
-- Sandstorm
 - Wing Attack
-- Supersonic
-- Rock Tomb
+- Rock Blast
+
+Geodude @ Bright Powder
+Level: 13
+Ability: Sand Veil
+Ball: Heavy
+- Mud Slap
+- Defense Curl
+- Rollout
 
 Nacli @ Passho Berry
-Level: 13
+Level: 14
 Ability: Purifying Salt
 Ball: Premier
 - Sandstorm
 - Shore Up
 - Salt Cure
-- Mud Shot
+- Iron Defense
 
 Tirtouga @ Rindo Berry
 Level: 13
@@ -4849,13 +4889,13 @@ Nature: Careful
 
 Nosepass @ Oran Berry
 Level: 15
-Ability: Magnet Pull
+Ability: Sand Force
 Ball: Great
 Nature: Bold
 - Block
-- Harden
+- Thunder Wave
 - Thunder Shock
-- Rock Tomb
+- Rock Throw
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -5285,11 +5325,23 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
 Shroomish
-Level: 9
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Level: 12
+
+Whismur
+Level: 13
+- Howl
+- Pound
+- Supersonic
+
+Wooper Paldea
+Level: 13
+- Poison Tail
+- Mud Shot
+- Tail Whip
+- Yawn
 
 === TRAINER_GEORGIA ===
 Name: GEORGIA
@@ -5985,8 +6037,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Poochyena
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 8
+
+Zigzagoon Galar
+Level: 9
+
+Skiddo
+Level: 9
 
 === TRAINER_BILLY ===
 Name: BILLY
@@ -5997,13 +6054,14 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandygast
+Level: 8
 
-Seedot
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sandshrew
+Level: 8
+
+Tympole
+Level: 9
 
 === TRAINER_JOSH ===
 Name: JOSH
@@ -6012,12 +6070,12 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Basic Trainer
 
-Geodude
-Level: 10
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
+Shieldon
+Level: 14
+- Metal Burst
+- Ancient Power
 
 === TRAINER_TOMMY ===
 Name: TOMMY
@@ -6028,13 +6086,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Tyrunt
+Level: 13
 
-Geodude
-Level: 8
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Rolycoly
+Level: 13
 
 === TRAINER_JOEY ===
 Name: JOEY
@@ -6045,9 +6101,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machop
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Rattata
+Level: 14
+Nature: Adamant
+- Super Fang
+- Flame Wheel
+- Quick Attack
+- Endure
 
 === TRAINER_BEN ===
 Name: BEN
@@ -6251,12 +6311,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 8
 
 Taillow
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 9
+
+Lechonk
+Level: 9
 
 === TRAINER_TIMMY ===
 Name: TIMMY
@@ -8839,15 +8900,24 @@ Pic: Twins
 Gender: Male
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Basic Trainer
 
 Seedot
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 12
+- Bullet Seed
+- Rollout
+- Payback
 
 Lotad
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 12
+- Muddy Water
+- Mega Drain
+
+Marill
+Level: 12
+
+Fidough
+Level: 12
 
 === TRAINER_MIU_AND_YUKI ===
 Name: MIU & YUKI
@@ -10596,13 +10666,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Rhyhorn
+Level: 13
 
-Geodude
-Level: 8
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Rockruff
+Level: 13
 
 === TRAINER_BRENDEN ===
 Name: BRENDEN
@@ -11089,13 +11157,14 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lillipup
+Level: 9
 
-Shroomish
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Foongus
+Level: 9
+
+Nidoran F
+Level: 9
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
@@ -11106,13 +11175,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Lotad
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tangela
+Level: 12
 
-Shroomish
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Rufflet
+Level: 12
 
 === TRAINER_JANICE ===
 Name: JANICE
@@ -11294,12 +11361,12 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 8
 
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Ledyba
+Level: 9
+
 
 === TRAINER_LYLE ===
 Name: LYLE
@@ -11311,20 +11378,32 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 8
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kricketot
+Level: 9
+- Round
+- Sing
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tarountula
+Level: 9
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ledyba
+Level: 10
+Ability: Iron Fist
+- Comet Punch
+- Mach Punch
+- Reflect
+
+Pineco
+Level: 10
+- Self-Destruct
+
+Spewpa
+Level: 11
+- Poison Powder
+- Protect
+- Infestation
 
 === TRAINER_JOSE ===
 Name: JOSE
@@ -11335,13 +11414,17 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
-Level: 8
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Silcoon
+Level: 12
 
 Nincada
-Level: 8
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Level: 12
+- Mud-Slap
+- Sand Attack
+- Cut
+
+Kakuna
+Level: 13
 
 === TRAINER_DOUG ===
 Name: DOUG
@@ -11400,12 +11483,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 10
 
 Nincada
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 10
 
 === TRAINER_JAMES_2 ===
 Name: JAMES
@@ -13012,9 +13093,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Starmie
+Level: 13
+- Bubblebeam
+- Psybeam
+- Power Gem
+- Recover
 
 === TRAINER_HAILEY ===
 Name: HAILEY
@@ -13896,13 +13980,12 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Onix
+Level: 13
+Ability: Intimidate
 
-Geodude
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Roggenrola
+Level: 13
 
 === TRAINER_JOHNSON ===
 Name: JOHNSON

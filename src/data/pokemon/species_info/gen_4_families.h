@@ -1256,7 +1256,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sKricketotLevelUpLearnset,
         .teachableLearnset = sKricketotTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_KRICKETUNE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 13, SPECIES_KRICKETUNE}),
     },
 
     [SPECIES_KRICKETUNE] =
