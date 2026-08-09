@@ -2705,7 +2705,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_OWN_TEMPO, ABILITY_STAMINA, ABILITY_INNER_FOCUS },
+        .abilities = { ABILITY_OWN_TEMPO, ABILITY_STAMINA, ABILITY_CHILLING_NEIGH },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Mudbray"),
         .cryId = CRY_MUDBRAY,
@@ -2774,7 +2774,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_OWN_TEMPO, ABILITY_STAMINA, ABILITY_INNER_FOCUS },
+        .abilities = { ABILITY_OWN_TEMPO, ABILITY_STAMINA, ABILITY_CHILLING_NEIGH },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Mudsdale"),
         .cryId = CRY_MUDSDALE,
@@ -3705,12 +3705,12 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_BOUNSWEET
     [SPECIES_BOUNSWEET] =
     {
-        .baseHP        = 42,
-        .baseAttack    = 30,
-        .baseDefense   = 38,
-        .baseSpeed     = 32,
-        .baseSpAttack  = 30,
-        .baseSpDefense = 38,
+        .baseHP        = 52,
+        .baseAttack    = 40,
+        .baseDefense   = 48,
+        .baseSpeed     = 62,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 48,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 235,
         .expYield = 42,
@@ -3766,6 +3766,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gOverworldPalette_Bounsweet,
             gShinyOverworldPalette_Bounsweet
         )
+		.perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sBounsweetLevelUpLearnset,
         .teachableLearnset = sBounsweetTeachableLearnset,
         .eggMoveLearnset = sBounsweetEggMoveLearnset,
@@ -3774,12 +3775,12 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 
     [SPECIES_STEENEE] =
     {
-        .baseHP        = 52,
-        .baseAttack    = 40,
-        .baseDefense   = 48,
+        .baseHP        = 62,
+        .baseAttack    = 70,
+        .baseDefense   = 58,
         .baseSpeed     = 62,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 48,
+        .baseSpAttack  = 45,
+        .baseSpDefense = 58,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 120,
         .expYield = 102,

@@ -369,7 +369,9 @@ PlayersHouse_1F_Text_Vigoroth2:
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
 	.string "INTERVIEWER: …We brought you this\n"
-	.string "report from in front of PETALBURG GYM.$"
+	.string "report about the ongoing POKé BALL\p"
+	.string "shortage exacerbated by the influx\n"
+	.string "shiny POKéMON appearing in HOENN.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "There is a movie on TV.\p"

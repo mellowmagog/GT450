@@ -398,7 +398,9 @@ PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
 	.string "you get to be instantly popular!$"
 
 PetalburgWoods_Text_CantBePopularIfILose:
-	.string "I can't be popular if I lose.$"
+	.string "I learned about Plates in school.\p"
+	.string "I think there is one ahead,\n"
+	.string "but it creeps me out.$"
 
 PetalburgWoods_Text_PeopleRespectYou:
 	.string "If you have a big BUG POKéMON,\n"

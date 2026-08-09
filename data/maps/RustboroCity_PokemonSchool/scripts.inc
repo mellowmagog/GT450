@@ -81,7 +81,7 @@ RustboroCity_PokemonSchool_EventScript_Teacher::
 	call_if_eq VAR_FACING, DIR_EAST, RustboroCity_PokemonSchool_EventScript_TeacherCheckOnStudentsEast
 	call_if_eq VAR_FACING, DIR_WEST, RustboroCity_PokemonSchool_EventScript_TeacherCheckOnStudentsWest
 	msgbox RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw, MSGBOX_DEFAULT
-	giveitem ITEM_QUICK_CLAW
+	giveitem ITEM_TM_SECRET_POWER
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
@@ -244,20 +244,20 @@ RustboroCity_PokemonSchool_Text_ExplainFreeze:
 	.string "Thaw it out using an ICE HEAL.$"
 
 RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw:
-	.string "Students who don't study get a little\n"
-	.string "taste of my QUICK CLAW.\p"
-	.string "Whether or not you are a good student \n"
-	.string "will be evident from the way you use\l"
-	.string "this item.$"
+	.string "Students who study well get a little\n"
+	.string "something to show for it.\p"
+	.string "You look like you are a good student. \n"
+	.string "You should be able to figure out a\l"
+	.string "use for this item.$"
 
 RustboroCity_PokemonSchool_Text_ExplainQuickClaw:
-	.string "A POKéMON holding the QUICK CLAW will\n"
-	.string "occasionally speed up and get to move\l"
-	.string "before its opponent.\p"
-	.string "There are many other items that are\n"
-	.string "meant to be held by POKéMON.\p"
-	.string "Just those alone will give you many\n"
-	.string "topics to study!$"
+	.string "A POKéMON who uses Secret Power\n"
+	.string "while holding a Plate can\l"
+	.string "change the moves type.\p"
+	.string "There are many Plates that have been\n"
+	.string "turning up around Hoenn.\p"
+	.string "See if you can find more to get\n"
+	.string "access to more attack types!$"
 
 RustboroCity_PokemonSchool_Text_TradingRightNow:
 	.string "I'm trading POKéMON with my friend\n"

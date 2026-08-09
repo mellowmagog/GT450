@@ -71,7 +71,7 @@ OldaleTown_EventScript_GoToMartEast::
 
 OldaleTown_EventScript_ExplainPokemonMart::
 	msgbox OldaleTown_Text_ThisIsAPokemonMart, MSGBOX_DEFAULT
-	giveitem ITEM_POTION
+	giveitem ITEM_REPEL
 	goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_BagIsFull
 	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_POTION_OLDALE
@@ -351,15 +351,17 @@ OldaleTown_Text_IWorkAtPokemonMart:
 OldaleTown_Text_ThisIsAPokemonMart:
 	.string "This is a POKéMON MART.\n"
 	.string "Just look for our blue roof.\p"
-	.string "We sell a variety of goods including\n"
-	.string "POKé BALLS for catching POKéMON.\p"
+	.string "We sell a variety of goods, usually\n"
+	.string "that would include POKé BALLS,\p"
+	.string "but with the ongoing POKé BALL shortage\n"
+	.string "this might be of more use.\p"
 	.string "Here, I'd like you to have this as\n"
 	.string "a promotional item.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A POTION can be used anytime, so it's\n"
-	.string "even more useful than a POKéMON CENTER\l"
-	.string "in certain situations.$"
+	.string "A REPEL can be used to prevent wild\n"
+	.string "encounters so won't be bothered\p"
+	.string "running through tall grass.$"
 
 OldaleTown_Text_WaitDontComeInHere:
 	.string "Aaaaah! Wait!\n"

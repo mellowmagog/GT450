@@ -2523,17 +2523,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .catchRate = 190,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 54 : 64,
         .evYield_Speed = 0,
-        .itemCommon = ITEM_PRETTY_FEATHER,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FLYING),
-    #if P_UPDATED_ABILITIES >= GEN_7
         .abilities = { ABILITY_KEEN_EYE, ABILITY_HYDRATION, ABILITY_RAIN_DISH },
-    #else
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_RAIN_DISH },
-    #endif
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Wingull"),
         .cryId = CRY_WINGULL,
@@ -2604,17 +2599,12 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 164,
     #endif
         .evYield_Defense = 0,
-        .itemCommon = ITEM_PRETTY_FEATHER,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FLYING),
-    #if P_UPDATED_ABILITIES >= GEN_7
         .abilities = { ABILITY_KEEN_EYE, ABILITY_DRIZZLE, ABILITY_RAIN_DISH },
-    #else
-        .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_RAIN_DISH },
-    #endif
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Pelipper"),
         .cryId = CRY_PELIPPER,
@@ -5202,7 +5192,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_PURE_POWER, ABILITY_NONE, ABILITY_TELEPATHY },
+        .abilities = { ABILITY_PURE_POWER, ABILITY_MINDS_EYE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Meditite"),
         .cryId = CRY_MEDITITE,
@@ -5284,7 +5274,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_PURE_POWER, ABILITY_NONE, ABILITY_TELEPATHY },
+        .abilities = { ABILITY_PURE_POWER, ABILITY_MINDS_EYE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Medicham"),
         .cryId = CRY_MEDICHAM,
@@ -7393,6 +7383,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gOverworldPalette_Trapinch,
             gShinyOverworldPalette_Trapinch
         )
+		.perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTrapinchLevelUpLearnset,
         .teachableLearnset = sTrapinchTeachableLearnset,
         .eggMoveLearnset = sTrapinchEggMoveLearnset,

@@ -417,15 +417,15 @@ Route104_Text_CindyPostRematch:
 
 Route104_Text_DarianIntro:
 	.string "I fished up a tough-looking POKéMON!\p"
-	.string "It has this magical quality to it!\n"
+	.string "It has this glowing quality to it!\n"
 	.string "It surely looks tough, yes it does!$"
 
 Route104_Text_DarianDefeat:
 	.string "What the…$"
 
 Route104_Text_DarianPostBattle:
-	.string "Hey, MAGIKARP, you sure don't live up\n"
-	.string "to your name, do you?$"
+	.string "You can have that cool shell\n"
+	.string "I found since you beat me.$"
 
 Route105_Text_FosterIntro:
 	.string "There's supposed to be a mystical\n"

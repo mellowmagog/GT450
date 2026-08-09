@@ -2293,10 +2293,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("Repel"),
         .price = (I_PRICE >= GEN_7) ? 400 : 350,
-        .holdEffectParam = 100,
+        .holdEffectParam = 250,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
-            "Pokémon for 100\n"
+            "Pokémon for 250\n"
             "steps."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_FIELD_USE,
@@ -2323,8 +2323,8 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Repel,
         .iconPalette = gItemIconPalette_SuperRepel,
-    },
-
+	},	
+		
     [ITEM_MAX_REPEL] =
     {
         .name = ITEM_NAME("Max Repel"),
@@ -12795,9 +12795,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("TM43"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Adds an effect to\n"
-            "attack depending\n"
-            "on the location."),
+            "Uses the power of\n"
+            "Plates to change\n"
+            "the attack's type."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

@@ -903,6 +903,47 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	closemessage
 	delay 30
 	return
+	
+	DewfordTown_EventScript_OldRodFisherman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_HowsFishing
+	msgbox DewfordTown_Text_GettingItchToFish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_GiveOldRod
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_NotGettingItchToFish
+	end
+
+DewfordTown_EventScript_GiveOldRod::
+	msgbox DewfordTown_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
+	giveitem ITEM_SUPER_ROD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_OLD_ROD
+	msgbox DewfordTown_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_NotGettingItchToFish::
+	msgbox DewfordTown_Text_ThatsTooBadThen, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_HowsFishing::
+	message DewfordTown_Text_HowsYourFishing
+	waitmessage
+	multichoice 20, 8, MULTI_HOWS_FISHING, TRUE
+	goto_if_eq VAR_RESULT, 0, DewfordTown_EventScript_FishingExcellent
+	goto_if_eq VAR_RESULT, 1, DewfordTown_EventScript_FishingNotSoGood
+	end
+
+DewfordTown_EventScript_FishingExcellent::
+	msgbox DewfordTown_Text_GreatHaulInSomeBigOnes, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_FishingNotSoGood::
+	msgbox DewfordTown_Text_FishingAdvice, MSGBOX_DEFAULT
+	release
+	end
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "MOM: {PLAYER}, we're here, honey!\p"
@@ -1013,45 +1054,5 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
-
-DewfordTown_EventScript_OldRodFisherman::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_HowsFishing
-	msgbox DewfordTown_Text_GettingItchToFish, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_GiveOldRod
-	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_NotGettingItchToFish
-	end
-
-DewfordTown_EventScript_GiveOldRod::
-	msgbox DewfordTown_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
-	giveitem ITEM_SUPER_ROD
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_OLD_ROD
-	msgbox DewfordTown_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_NotGettingItchToFish::
-	msgbox DewfordTown_Text_ThatsTooBadThen, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_HowsFishing::
-	message DewfordTown_Text_HowsYourFishing
-	waitmessage
-	multichoice 20, 8, MULTI_HOWS_FISHING, TRUE
-	goto_if_eq VAR_RESULT, 0, DewfordTown_EventScript_FishingExcellent
-	goto_if_eq VAR_RESULT, 1, DewfordTown_EventScript_FishingNotSoGood
-	end
-
-DewfordTown_EventScript_FishingExcellent::
-	msgbox DewfordTown_Text_GreatHaulInSomeBigOnes, MSGBOX_DEFAULT
-	release
-	end
-
-DewfordTown_EventScript_FishingNotSoGood::
-	msgbox DewfordTown_Text_FishingAdvice, MSGBOX_DEFAULT
-	release
-	end
+	
 	

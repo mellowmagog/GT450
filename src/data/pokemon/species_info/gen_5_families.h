@@ -2311,15 +2311,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .catchRate = 255,
         .expYield = 56,
         .evYield_Defense = 0,
-        .itemCommon = ITEM_EVERSTONE,
-        .itemRare = ITEM_HARD_STONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
     #if P_UPDATED_ABILITIES >= GEN_7
-        .abilities = { ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SHELL_ARMOR, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
     #else
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_FORCE },
     #endif
@@ -2387,15 +2385,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .expYield = 137,
         .evYield_Attack = 0,
         .evYield_Defense = 0,
-        .itemCommon = ITEM_EVERSTONE,
-        .itemRare = ITEM_HARD_STONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
     #if P_UPDATED_ABILITIES >= GEN_7
-        .abilities = { ABILITY_STURDY, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SHELL_ARMOR, ABILITY_WEAK_ARMOR, ABILITY_SAND_FORCE },
     #else
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_FORCE },
     #endif
@@ -2471,15 +2467,13 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .expYield = 227,
     #endif
         .evYield_Attack = 0,
-        .itemCommon = ITEM_EVERSTONE,
-        .itemRare = ITEM_HARD_STONE,
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
     #if P_UPDATED_ABILITIES >= GEN_7
-        .abilities = { ABILITY_STURDY, ABILITY_SAND_STREAM, ABILITY_SAND_FORCE },
+        .abilities = { ABILITY_SHELL_ARMOR, ABILITY_SAND_STREAM, ABILITY_SAND_FORCE },
     #else
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_FORCE },
     #endif

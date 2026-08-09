@@ -389,7 +389,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 20 : 30,
+        .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 2 : 30,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -603,8 +603,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Vine Whip"),
         .description = COMPOUND_STRING(
-            "Strikes the foe with\n"
-            "slender, whiplike vines."),
+            "Strikes the foe with vines\n"
+            "with a chance to flinch."),
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .pp = 25,
         #elif B_UPDATED_MOVE_DATA >= GEN_4
@@ -775,7 +775,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = B_UPDATED_MOVE_TYPES >= GEN_2 ? TYPE_GROUND : TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 15,
+        .pp = 2,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -1059,7 +1059,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 30,
+        .pp = 2,
         .target = TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -1083,10 +1083,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A toxic attack with barbs,\n"
             "etc., that may poison."),
         .effect = EFFECT_HIT,
-        .power = 15,
+        .power = 35,
         .type = TYPE_POISON,
         .accuracy = 100,
-        .pp = 35,
+        .pp = 25,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -1161,7 +1161,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 30,
+        .pp = 2,
         .target = TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -1216,7 +1216,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 40,
+        .pp = 2,
         .target = TARGET_BOTH,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -1979,7 +1979,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_GRASS,
         .accuracy = 95,
-        .pp = 2,
+        .pp = 3,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -2249,9 +2249,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps the foe in a ring of\n"
             "fire for "BINDING_TURNS" turns."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
+        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 65 : 15,
         .type = TYPE_FIRE,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 85 : 70,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 70,
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -2876,7 +2876,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -2940,7 +2940,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 2,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -2992,7 +2992,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_WATER,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3022,7 +3022,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3160,7 +3160,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -3181,28 +3181,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Bide"),
         .description = COMPOUND_STRING(
-            "Endures attack for 2\n"
-            "turns to retaliate double."),
-        .effect = EFFECT_BIDE,
-        .power = 1,
-        .type = TYPE_NORMAL,
-        #if B_UPDATED_MOVE_DATA >= GEN_4
-            .accuracy = 0,
-            .priority = 1,
-        #elif B_UPDATED_MOVE_DATA >= GEN_2
-            .accuracy = 100,
-            .priority = 0,
-        #else
-            .accuracy = 0,
-            .priority = 0,
-        #endif
-        .pp = 10,
-        .target = TARGET_USER,
+            "An attack that moves last\n"
+            "and gains power if hit."),
+        .effect = EFFECT_REVENGE,
+        .power = 40,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+		.pp = 10,
+		.target = TARGET_SELECTED,
+		.priority = -4,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .sleepTalkBanned = TRUE,
-        .instructBanned = TRUE,
-        .mirrorMoveBanned = TRUE,
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_NEXT_APPEAL_LATER : CONTEST_EFFECT_AVOID_STARTLE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -3485,9 +3474,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps and squeezes the\n"
             "foe for "BINDING_TURNS" turns."),
         .effect = EFFECT_HIT,
-        .power = 35,
+        .power = 65,
         .type = TYPE_WATER,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 85 : 75,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 75,
         .pp = B_UPDATED_MOVE_DATA >= GEN_5 ? 15 : 10,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -4361,31 +4350,25 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_CONVERSION] =
     {
-        .name = COMPOUND_STRING("Conversion"),
+        .name = COMPOUND_STRING("Foreshock"),
         .description = COMPOUND_STRING(
-            "Changes the user's type\n"
-        #if B_UPDATED_CONVERSION >= GEN_6
-            "into first known move's type."),
-        #else
-            "into a known move's type."),
-        #endif
-        .effect = EFFECT_CONVERSION,
-        .power = 0,
-        .type = TYPE_NORMAL,
-        .accuracy = 0,
-        .pp = 30,
-        .target = TARGET_USER,
-        .priority = 0,
-        .category = DAMAGE_CATEGORY_STATUS,
+            "A minor ground quake\n"
+            "that always goes first."),
+        .effect = EFFECT_EARTHQUAKE,
+        .power = 40,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 1,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
         .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
-        .snatchAffected = B_UPDATED_MOVE_FLAGS >= GEN_5,
-        .ignoresProtect = TRUE,
-        .mirrorMoveBanned = TRUE,
+        .damagesUnderground = TRUE,
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Conversion,
+        .battleAnimScript = gBattleAnimMove_Magnitude,
         .validApprenticeMove = TRUE,
     },
 
@@ -4775,7 +4758,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = B_UPDATED_MOVE_TYPES >= GEN_5 ? TYPE_GHOST : TYPE_MYSTERY,
         .accuracy = 0,
-        .pp = 10,
+        .pp = 2,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -4825,27 +4808,27 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_CONVERSION_2] =
     {
-        .name = COMPOUND_STRING("Conversion 2"),
+        .name = COMPOUND_STRING("Slobbery Chomp"),
         .description = COMPOUND_STRING(
-            "Makes the user resistant\n"
-            "to the last attack's type."),
-        .effect = EFFECT_CONVERSION_2,
-        .power = 0,
-        .type = TYPE_NORMAL,
-        .accuracy = 0,
-        .pp = 30,
-        .target = B_UPDATED_MOVE_DATA >= GEN_5 ? TARGET_SELECTED : TARGET_USER,
+            "Eats the foe's held berry\n"
+            "gaining its effect."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 20,
+        .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_STATUS,
-        .zMove = { .effect = Z_EFFECT_RECOVER_HP },
-        .ignoresProtect = TRUE,
-        .ignoresSubstitute = B_UPDATED_MOVE_FLAGS >= GEN_5,
-        .mirrorMoveBanned = TRUE,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+		.makesContact = TRUE,
+		.additionalEffects = ADDITIONAL_EFFECTS({
+			.moveEffect = MOVE_EFFECT_BUG_BITE,
+		}),
         .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Conversion2,
+        .battleAnimScript = gBattleAnimMove_PoisonFang,
         .validApprenticeMove = TRUE,
     },
 
@@ -5601,7 +5584,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = B_UPDATED_MOVE_TYPES >= GEN_6 ? TYPE_FAIRY : TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 2,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -6850,9 +6833,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps and hurts the foe in\n"
             "a whirlpool for "BINDING_TURNS" turns."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
+        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 65 : 15,
         .type = TYPE_WATER,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 85 : 70,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 70,
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -7932,20 +7915,17 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Secret Power"),
         .description = COMPOUND_STRING(
-            "An attack with effects\n"
-            "that vary by location."),
-        .effect = EFFECT_HIT,
-        .power = 70,
+            "The type varies with the\n"
+            "kind of Plate held."),
+        .effect = EFFECT_CHANGE_TYPE_ON_ITEM,
+        .power = 60,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_SECRET_POWER,
-            .chance = 30,
-        }),
+		.argument = { .holdEffect = HOLD_EFFECT_PLATE },
         .contestEffect = CONTEST_EFFECT_BETTER_WITH_GOOD_CONDITION,
         .contestCategory = CONTEST_CATEGORY_SMART,
         .contestComboStarterId = 0,
@@ -8035,17 +8015,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Tail Glow"),
         .description = COMPOUND_STRING(
-        #if B_UPDATED_MOVE_DATA >= GEN_5
-            "Flash light that drastically\n"
-        #else
-            "Flashes a light that sharply\n"
-        #endif
-            "raises Sp. Atk."),
+            "Flashes and sharply raises\n"
+            "Sp. Atk. and lowers Evasion."),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_BUG,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -8059,8 +8035,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestComboMoves = {0},
         .battleAnimScript = gBattleAnimMove_TailGlow,
         .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = STAT_CHANGE_EFFECT_MINUS,
+            .evasion = 1,
+        },
+        {
             .moveEffect = STAT_CHANGE_EFFECT_PLUS,
-            .spAtk = B_UPDATED_MOVE_DATA >= GEN_5 ? 3 : 2,
+            .spAtk = 2,
         }),
         .validApprenticeMove = TRUE,
     },
@@ -8130,7 +8110,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_FLYING,
         .accuracy = 100,
-        .pp = 15,
+        .pp = 2,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -8207,7 +8187,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Mud Sport"),
         .description = COMPOUND_STRING(
             "Covers the user in mud to\n"
-            "raise Defense and Special Attack."),
+            "raise Defense and Sp. Attack."),
         // in theory this should mention 5 turns (gen 6+)
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
@@ -8969,9 +8949,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Traps and hurts the foe in\n"
             "quicksand for "BINDING_TURNS" turns."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
+        .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 65 : 15,
         .type = TYPE_GROUND,
-        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 85 : 70,
+        .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 70,
         .pp = 15,
         .target = TARGET_SELECTED,
         .priority = 0,
@@ -9119,7 +9099,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_STEEL,
         .accuracy = 0,
-        .pp = 15,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -9174,7 +9154,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .effect = EFFECT_STAT_CHANGE,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 2,
         .target = B_UPDATED_MOVE_DATA >= GEN_8 ? TARGET_USER_AND_ALLY: TARGET_USER ,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -9448,8 +9428,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Water Sport"),
         .description = COMPOUND_STRING(
-            "The user becomes soaked to\n"
-            "raise Attack and Special Defense."),
+            "Soaks the user to raise\n"
+            "Attack and Special Defense."),
         // in theory this should mention 5 turns (gen6+)
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
@@ -9463,7 +9443,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 		.snatchAffected = TRUE,
         .ignoresProtect = TRUE,
         .mirrorMoveBanned = TRUE,
-		
+		.additionalEffects = ADDITIONAL_EFFECTS({
+			.moveEffect = STAT_CHANGE_EFFECT_PLUS,
+			.attack = 1,
+			.spDef = 1,
+		}),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_EXCITE_AUDIENCE_IN_ANY_CONTEST : CONTEST_EFFECT_HIGHLY_APPEALING,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = COMBO_STARTER_WATER_SPORT,
@@ -10734,7 +10718,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_ROCK,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -12550,7 +12534,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_DARK,
         .accuracy = 0,
-        .pp = 15,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -13069,7 +13053,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_POISON,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -14011,7 +13995,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 30,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -15333,7 +15317,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_SPECIAL,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
         .argument = { .absorbPercentage = 75 },
         .makesContact = TRUE,
         .healingMove = B_HEAL_BLOCKING >= GEN_6,
@@ -15502,13 +15486,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Fairy Wind"),
         .description = COMPOUND_STRING(
-            "Stirs up a fairy wind to\n"
-            "strike the foe."),
+            "Stirs up a fairy wind\n"
+            "that never misses."),
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_FAIRY,
-        .accuracy = 100,
-        .pp = 30,
+        .accuracy = 0,
+        .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
@@ -16162,7 +16146,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_FAIRY,
         .accuracy = 100,
-        .pp = 5,
+        .pp = 2,
         .target = TARGET_SELECTED,
         .priority = 1,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -18337,7 +18321,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_FIGHTING,
         .accuracy = 0,
-        .pp = 5,
+        .pp = 2,
         .target = TARGET_USER,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
