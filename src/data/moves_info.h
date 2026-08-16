@@ -416,16 +416,22 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Cuts the foe with sharp\n"
             "scythes, claws, etc."),
-        .effect = EFFECT_HIT,
+        .effect = EFFECT_RAPID_SPIN,
         .power = 50,
         .type = TYPE_GRASS,
-        .accuracy = 95,
-        .pp = 30,
+        .accuracy = 100,
+        .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
         .slicingMove = TRUE,
+		.additionalEffects = ADDITIONAL_EFFECTS({
+			.moveEffect = MOVE_EFFECT_STAT_PLUS,
+			.attack = 1,
+			.self = TRUE,
+			.chance = 100,
+		}),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_HIGHLY_APPEALING : CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
@@ -3264,7 +3270,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SELF_DESTRUCT] =
     {
-        .name = COMPOUND_STRING("Self-Destruct"),
+        .name = COMPOUND_STRING("Self-Destruct Old"),
         .description = COMPOUND_STRING(
             "Inflicts severe damage but\n"
             "seriously hurts the user."),
@@ -3315,20 +3321,19 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Lick"),
         .description = COMPOUND_STRING(
             "Licks with a long tongue to\n"
-            "injure. May also paralyze."),
+            "eat a foe's held berry."),
         .effect = EFFECT_HIT,
-        .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 30 : 20,
-        .type = TYPE_GHOST,
+        .power = 60,
+        .type = TYPE_POISON,
         .accuracy = 100,
-        .pp = 30,
+        .pp = 20,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_PARALYSIS,
-            .chance = 30,
-        }),
+		.additionalEffects = ADDITIONAL_EFFECTS({
+			.moveEffect = MOVE_EFFECT_BUG_BITE,
+		}),
         .contestEffect = C_UPDATED_MOVE_EFFECTS >= GEN_6 ? CONTEST_EFFECT_STARTLE_PREV_MON : CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
         .contestCategory = C_UPDATED_MOVE_CATEGORIES >= GEN_6 ? CONTEST_CATEGORY_CUTE : CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -4160,7 +4165,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_EXPLOSION] =
     {
-        .name = COMPOUND_STRING("Explosion"),
+        .name = COMPOUND_STRING("Explosion old"),
         .description = COMPOUND_STRING(
             "Inflicts severe damage but\n"
             "makes the user faint."),
@@ -4368,7 +4373,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_BEAUTY,
         .contestComboStarterId = 0,
         .contestComboMoves = {0},
-        .battleAnimScript = gBattleAnimMove_Magnitude,
+        .battleAnimScript = gBattleAnimMove_Rollout,
         .validApprenticeMove = TRUE,
     },
 
@@ -5827,7 +5832,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 15,
+        .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -6245,7 +6250,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 50 : 20,
         .type = TYPE_NORMAL,
         .accuracy = 100,
-        .pp = 40,
+        .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -13111,7 +13116,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 40,
         .type = TYPE_POISON,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 5,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
@@ -13922,7 +13927,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 60,
         .type = TYPE_GROUND,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 10,
         .target = TARGET_FOES_AND_ALLY,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
@@ -15621,7 +15626,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,
-        .pp = 20,
+        .pp = 10,
         .target = TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_STATUS,
@@ -21977,7 +21982,81 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         }),
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
-
+	
+	    [MOVE_FORESHOCK] =
+    {
+        .name = COMPOUND_STRING("Foreshock"),
+        .description = COMPOUND_STRING(
+            "A minor ground quake\n"
+            "that always goes first."),
+        .effect = EFFECT_EARTHQUAKE,
+        .power = 40,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_SELECTED,
+        .priority = 1,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .zMove = { .effect = Z_EFFECT_ALL_STATS_UP_1 },
+        .damagesUnderground = TRUE,
+        .contestEffect = CONTEST_EFFECT_BETTER_IF_SAME_TYPE,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Rollout,
+        .validApprenticeMove = TRUE,
+    },
+	
+	    [MOVE_NEW_SELF_DESTRUCT] =
+    {
+        .name = COMPOUND_STRING("Self-Destruct"),
+        .description = COMPOUND_STRING(
+            "Inflicts severe damage but\n"
+            "seriously hurts the user."),
+        .effect = EFFECT_RECOIL,
+        .power = 80,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+		.argument = { .recoilPercentage = 50 },
+        .parentalBondBanned = TRUE,
+        .dampBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_USER_MORE_EASILY_STARTLED,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_MEAN_LOOK, COMBO_STARTER_BLOCK},
+        .battleAnimScript = gBattleAnimMove_SelfDestruct,
+        .validApprenticeMove = TRUE,
+    },
+	
+	    [MOVE_NEW_EXPLOSION] =
+    {
+        .name = COMPOUND_STRING("Explosion"),
+        .description = COMPOUND_STRING(
+            "Inflicts severe damage but\n"
+            "seriously hurts the user."),
+        .effect = EFFECT_RECOIL,
+        .power = 120,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 5,
+        .target = TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+		.argument = { .recoilPercentage = 50 },
+        .parentalBondBanned = TRUE,
+        .dampBanned = TRUE,
+        .contestEffect = CONTEST_EFFECT_GREAT_APPEAL_BUT_NO_MORE_MOVES,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_MEAN_LOOK, COMBO_STARTER_BLOCK},
+        .battleAnimScript = gBattleAnimMove_Explosion,
+        .validApprenticeMove = TRUE,
+    },
+	
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

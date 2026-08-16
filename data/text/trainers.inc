@@ -2289,8 +2289,8 @@ Route116_Text_KarenPostRematch:
 	.string "I can't beat you, then. Not yet.$"
 
 Route116_Text_SarahIntro:
-	.string "Just so you know, I've never once been\n"
-	.string "bested by anyone at anything.$"
+	.string "We're battling to determine who\n"
+	.string "gets that DUSK BALL.$"
 
 Route116_Text_SarahDefeat:
 	.string "Oh, my goodness.\n"
@@ -2303,9 +2303,8 @@ Route116_Text_SarahPostBattle:
 	.string "my wealth has no meaning.$"
 
 Route116_Text_DawsonIntro:
-	.string "When you lay your eyes on my POKéMON's\n"
-	.string "gorgeous fur, their beauty will render\l"
-	.string "you helpless!$"
+	.string "We can fight you instead if that\n"
+	.string "is what you would prefer.$"
 
 Route116_Text_DawsonDefeat:
 	.string "Oh, baby, say it isn't so!$"

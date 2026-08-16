@@ -748,3 +748,96 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+DewfordTown_EventScript_EggWoman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_DEWFORD_EGG, DewfordTown_EventScript_ReceivedEgg
+	msgbox DewfordTown_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_DeclineEgg
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, DewfordTown_EventScript_NoRoomForEgg
+	msgbox DewfordTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_DEWFORD_EGG
+	playfanfare MUS_OBTAIN_ITEM
+	message DewfordTown_Text_ReceivedTheEgg
+	waitfanfare
+	random 5
+	switch VAR_RESULT
+	case 0, [DewfordTown_EventScript_Grimer_Egg]
+	case 1, [DewfordTown_EventScript_Drowzee_Egg]
+	case 2, [DewfordTown_EventScript_Venipede_Egg]
+	case 3, [DewfordTown_EventScript_Trubbish_Egg]
+	case 4, [DewfordTown_EventScript_Toxel_Egg]
+	release
+	end
+	
+DewfordTown_EventScript_Grimer_Egg::
+	giveegg SPECIES_GRIMER
+	release
+	end
+	
+DewfordTown_EventScript_Drowzee_Egg::
+	giveegg SPECIES_DROWZEE
+	release
+	end
+	
+DewfordTown_EventScript_Venipede_Egg::
+	giveegg SPECIES_VENIPEDE
+	release
+	end
+	
+DewfordTown_EventScript_Trubbish_Egg::
+	giveegg SPECIES_TRUBBISH
+	release
+	end
+	
+DewfordTown_EventScript_Toxel_Egg::
+	giveegg SPECIES_TOXEL
+	release
+	end
+
+DewfordTown_EventScript_ReceivedEgg::
+	msgbox DewfordTown_Text_EverySoOftenEggFoundAtDayCare, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_NoRoomForEgg::
+	msgbox DewfordTown_Text_NoRoomForThisEgg, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_DeclineEgg::
+	msgbox DewfordTown_Text_AsYouWishThen, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_Text_HaveEggWillYouTakeIt:
+	.string "You are a TRAINER, yes?\p"
+	.string "My studio was being ransacked\n"
+	.string "by a gang of wild POISON POKéMON.\p"
+	.string "I was able to run them off, but\n"
+	.string "I found this POKéMON EGG left behind.\p"
+	.string "It feels bad to throw it out.\p"
+	.string "Will you take this EGG from me?$"
+
+DewfordTown_Text_HopeYoullWalkPlentyWithEgg:
+	.string "Good! I heard if you walk plenty with\n"
+	.string "POKéMON EGGs they can hatch.$"
+
+DewfordTown_Text_ReceivedTheEgg:
+	.string "{PLAYER} received the EGG.$"
+
+DewfordTown_Text_NoRoomForThisEgg:
+	.string "Oh? You've too many POKéMON.\n"
+	.string "There's no room for this EGG…$"
+
+DewfordTown_Text_AsYouWishThen:
+	.string "As you wish, then…\p"
+	.string "If you have a change of heart about\n"
+	.string "taking this EGG, I will be here.$"
+
+DewfordTown_Text_EverySoOftenEggFoundAtDayCare:
+	.string "You should check the upstairs of\n"
+	.string "POKéCENTERs. I've heard they have\p"
+	.string "special rooms for hatching EGGs.$"
