@@ -6537,17 +6537,32 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Magikarp
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Bruxish
+Level: 16
+Ability: Strong Jaw
+Nature: Adamant
+- Bite
+- Psychic Fangs
+- Disable
+- Scary Face
 
-Tentacool
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mantyke
+Level: 15
+Ability: Water Absorb
+Nature: Bold
+- Bubble Beam
+- Aqua Ring
+- Air Cutter
+- Captivate
 
-Magikarp
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Clauncher
+Level: 16
+Ability: Mega Launcher
+Nature: Modest
+- Water Pulse
+- Dark Pulse
+- Vice Grip
+- Water Sport
 
 === TRAINER_NED ===
 Name: NED
@@ -6558,9 +6573,32 @@ Music: Hiker
 Double Battle: No
 AI: Smart Trainer
 
-Tentacool
-Level: 11
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Qwilfish Hisui
+Level: 15
+Ability: Poison Point
+Nature: Impish
+- Toxic Spikes
+- Poison Sting
+- Bite
+- Fell Stinger
+
+Mareanie
+Level: 15
+Ability: Merciless
+Nature: Bold
+- Toxic
+- Venoshock
+- Baneful Bunker
+- Recover
+
+Seel
+Level: 16
+Ability: Thick Fat
+Nature: Calm
+- Chilling Water
+- Icy Wind
+- Safeguard
+- Encore
 
 === TRAINER_DALE ===
 Name: DALE
