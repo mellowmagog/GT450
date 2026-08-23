@@ -840,7 +840,7 @@ Baltoy
 Level: 27
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Psybeam
-- Self Destruct
+- New Self Destruct
 - Sandstorm
 - Ancient Power
 
@@ -1200,13 +1200,41 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Azurill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Herdier @ Eviolite
+Level: 17
+Ability: Intimidate
+Nature: Adamant
+- Retaliate
+- Bite
+- Work Up
+- Ice Fang
 
-Marill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Applin @ Petaya Berry
+Level: 18
+Ability: Gluttony
+Nature: Modest
+- Dragon Breath
+- Infestation
+- Growth
+- Grass Knot
+
+Cetoddle @ Leftovers
+Level: 17
+Ability: Thick Fat
+Nature: Impish
+- Ice Ball
+- Bounce
+- Rest
+- Sleep Talk
+
+Corsola @ Rindo Berry
+Level: 18
+Ability: Triage
+Nature: Sassy
+- Horn Leech
+- Ancient Power
+- Icicle Spear
+- Recover
 
 === TRAINER_CHARLIE ===
 Name: CHARLIE
@@ -3228,9 +3256,23 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Throh @ Flame Orb
+Level: 16
+Ability: Guts
+Nature: Adamant
+- Brutal Swing
+- Brick Break
+- Bulk Up
+- Focus Energy
+
+Skiploom @ Coba Berry
+Level: 17
+Ability: Wind Rider
+Nature: Impish
+- Rage Powder
+- Leech Seed
+- Acrobatics
+- Bullet Seed
 
 === TRAINER_HITOSHI ===
 Name: HITOSHI
@@ -4782,7 +4824,7 @@ Glalie
 Level: 52
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Shadow Ball
-- Explosion
+- New Explosion
 - Hail
 - Ice Beam
 
@@ -4860,7 +4902,7 @@ Ability: Toxic Debris
 Nature: Modest
 - Acid Spray
 - Ancient Power
-- Self Destruct
+- New Self Destruct
 
 Carbink @ Liechi Berry
 Level: 13
@@ -4989,7 +5031,7 @@ Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rollout
 - Spark
-- Self Destruct
+- New Self Destruct
 - Shock Wave
 
 Electrike
@@ -7855,7 +7897,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
 - Tackle
 - Smog
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 17
@@ -7863,7 +7905,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
 - Tackle
 - Smog
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 17
@@ -7871,7 +7913,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 === TRAINER_LUNG ===
 Name: LUNG
@@ -7903,7 +7945,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 24
@@ -7918,7 +7960,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 26
@@ -7940,7 +7982,7 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 27
@@ -7948,7 +7990,7 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 27
@@ -8019,7 +8061,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 Koffing
 Level: 33
@@ -8027,7 +8069,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Poison Gas
 - Tackle
 - Sludge
-- Self Destruct
+- New Self Destruct
 
 Weezing @ Smoke Ball
 Level: 35
@@ -8044,9 +8086,23 @@ Music: Intense
 Double Battle: No
 AI: Smart Trainer
 
-Meditite
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Wartortle @ Rocky Helmet
+Level: 17
+Ability: Shell Armor
+Nature: Calm
+- Follow Me
+- Water Pulse
+- Aqua Ring
+- Bubble
+
+Sawk @ Weakness Policy
+Level: 16
+Ability: Sturdy
+Nature: Lonely
+- Bulldoze
+- Taunt
+- Power-up Punch
+- Comet Punch
 
 === TRAINER_LAURA ===
 Name: LAURA
@@ -9205,17 +9261,32 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Wingull
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lunatone @ Damp Rock
+Level: 18
+Ability: Drizzle
+Nature: Bold
+- Ancient Power
+- Moonblast
+- Weather Ball
+- Reflect
 
-Machop
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Parasect @ Leftovers
+Level: 18
+Ability: Dry Skin
+Nature: Brave
+- Spore
+- Fury Cutter
+- Swords Dance
+- Leech Seed
 
-Tentacool
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Clobbopus @ Binding Band
+Level: 18
+Ability: Technician
+Nature: Adamant
+- Whirlpool
+- Mach Punch
+- Power-up Punch
+- Octolock
 
 === TRAINER_PHILLIP ===
 Name: PHILLIP
@@ -9422,7 +9493,7 @@ Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Toxic
 - Thunder
-- Self Destruct
+- New Self Destruct
 - Sludge Bomb
 
 === TRAINER_KAYLEY ===
@@ -10103,7 +10174,7 @@ AI: Smart Trainer
 Lunatone
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Explosion
+- New Explosion
 - Reflect
 - Light Screen
 - Psychic
@@ -10111,7 +10182,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Solrock
 Level: 43
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Explosion
+- New Explosion
 - Reflect
 - Light Screen
 - Shadow Ball
@@ -10789,9 +10860,32 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Machop
-Level: 13
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mankey @ Assault Vest
+Level: 18
+Ability: Defiant
+Nature: Careful
+- Bulldoze
+- Low Sweep
+- Rock Tomb
+- Body Slam
+
+Elekid @ Magnet
+Level: 17
+Ability: Static
+Nature: Timid
+- Electro Ball
+- Electroweb
+- Trailblaze
+- Low Kick
+
+Combusken @ Sitrus Berry
+Level: 17
+Ability: Speed Boost
+Nature: Adamant
+- Bounce
+- Fire Punch
+- Upper Hand
+- Substitute
 
 === TRAINER_LILITH ===
 Name: LILITH
@@ -12250,12 +12344,44 @@ Class: Beauty
 Pic: Beauty
 Gender: Female
 Music: Female
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
-Goldeen
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Munna @ Psychic Seed
+Level: 18
+Ability: Psychic Surge
+Nature: Bold
+- Hypnosis
+- Dream Eater
+- Psywave
+- Moonlight
+
+Beautifly @ Clear Amulet
+Level: 18
+Ability: Tinted Lens
+Nature: Modest
+- Expanding Force
+- Air Cutter
+- Silver Wind
+- Quiver Dance
+
+Ponyta Galar @ Insect Plate
+Level: 17
+Ability: Tangling Hair
+Nature: Jolly
+- Stomp
+- Zen Headbutt
+- Low Kick
+- Secret Power
+
+Cutiefly @ Focus Sash
+Level: 17
+Ability: Friend Guard
+Nature: Rash
+- Pollen Puff
+- Fairy Wind
+- Struggle Bug
+- Charm
 
 === TRAINER_GERALD ===
 Name: GERALD
@@ -12330,7 +12456,7 @@ Koffing
 Level: 25
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
-- Self Destruct
+- New Self Destruct
 - Sludge
 - Smokescreen
 
@@ -12355,7 +12481,7 @@ Koffing
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Poison Gas
-- Self Destruct
+- New Self Destruct
 - Sludge
 - Smokescreen
 
@@ -12388,7 +12514,7 @@ Koffing
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
-- Self Destruct
+- New Self Destruct
 - Sludge
 - Smokescreen
 
@@ -14671,7 +14797,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Protect
 - Rollout
 - Magnitude
-- Explosion
+- New Explosion
 
 Kabuto @ Sitrus Berry
 Level: 35
@@ -14685,7 +14811,7 @@ Onix
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Iron Tail
-- Explosion
+- New Explosion
 - Roar
 - Rock Slide
 
@@ -14693,7 +14819,7 @@ Nosepass @ Sitrus Berry
 Level: 37
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
-- Explosion
+- New Explosion
 - Protect
 - Rock Slide
 
@@ -14721,7 +14847,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Protect
 - Rollout
 - Magnitude
-- Explosion
+- New Explosion
 
 Kabutops @ Sitrus Berry
 Level: 40
@@ -14735,7 +14861,7 @@ Onix
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Iron Tail
-- Explosion
+- New Explosion
 - Roar
 - Rock Slide
 
@@ -14743,7 +14869,7 @@ Nosepass @ Sitrus Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
-- Explosion
+- New Explosion
 - Protect
 - Rock Slide
 
@@ -14771,7 +14897,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Protect
 - Rollout
 - Earthquake
-- Explosion
+- New Explosion
 
 Kabutops @ Sitrus Berry
 Level: 45
@@ -14785,7 +14911,7 @@ Onix
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Iron Tail
-- Explosion
+- New Explosion
 - Roar
 - Rock Slide
 
@@ -14793,7 +14919,7 @@ Nosepass @ Sitrus Berry
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
-- Explosion
+- New Explosion
 - Protect
 - Rock Slide
 
@@ -14821,7 +14947,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Focus Punch
 - Rollout
 - Earthquake
-- Explosion
+- New Explosion
 
 Omastar
 Level: 47
@@ -14843,7 +14969,7 @@ Steelix
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Iron Tail
-- Explosion
+- New Explosion
 - Roar
 - Rock Slide
 
@@ -14851,7 +14977,7 @@ Nosepass @ Sitrus Berry
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
-- Explosion
+- New Explosion
 - Protect
 - Rock Slide
 
@@ -15070,7 +15196,7 @@ Level: 36
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rollout
 - Thunder
-- Explosion
+- New Explosion
 - Rain Dance
 
 Magneton @ Sitrus Berry
@@ -15120,7 +15246,7 @@ Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rollout
 - Thunder
-- Explosion
+- New Explosion
 - Rain Dance
 
 Magneton @ Sitrus Berry
@@ -15170,7 +15296,7 @@ Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rollout
 - Thunder
-- Explosion
+- New Explosion
 - Rain Dance
 
 Magneton @ Sitrus Berry
@@ -15228,7 +15354,7 @@ Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rollout
 - Thunder
-- Explosion
+- New Explosion
 - Rain Dance
 
 Magneton @ Sitrus Berry
@@ -15286,7 +15412,7 @@ Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
 - Sunny Day
-- Explosion
+- New Explosion
 - Attract
 
 === TRAINER_FLANNERY_3 ===
@@ -15336,7 +15462,7 @@ Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
 - Sunny Day
-- Explosion
+- New Explosion
 - Attract
 
 === TRAINER_FLANNERY_4 ===
@@ -15394,7 +15520,7 @@ Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
 - Sunny Day
-- Explosion
+- New Explosion
 - Attract
 
 === TRAINER_FLANNERY_5 ===
@@ -15452,7 +15578,7 @@ Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Overheat
 - Sunny Day
-- Explosion
+- New Explosion
 - Attract
 
 === TRAINER_NORMAN_2 ===
@@ -15959,7 +16085,7 @@ Claydol
 Level: 54
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
-- Explosion
+- New Explosion
 - Psychic
 - Light Screen
 
@@ -16009,7 +16135,7 @@ Claydol
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
-- Explosion
+- New Explosion
 - Psychic
 - Light Screen
 
@@ -16067,7 +16193,7 @@ Claydol
 Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
-- Explosion
+- New Explosion
 - Psychic
 - Light Screen
 
