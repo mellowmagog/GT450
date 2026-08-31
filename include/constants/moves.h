@@ -906,6 +906,13 @@ enum __attribute__((packed)) Move
 	MOVE_FORESHOCK = 848,
 	MOVE_NEW_SELF_DESTRUCT = 849,
 	MOVE_NEW_EXPLOSION = 850,
+	MOVE_CHILL_TOUCH = 851,
+	MOVE_ALOE_SLAP = 852,
+	MOVE_TINCTURE = 853,
+	MOVE_MELTDOWN = 854,
+	MOVE_BARK = 855,
+	MOVE_ZOOMIES = 856,
+	MOVE_GAS_LEAK = 857,
     MOVES_COUNT_GEN9,
 
     // Add any custom moves here, not further down!

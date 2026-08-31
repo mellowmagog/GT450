@@ -612,8 +612,6 @@ void Ai_InitPartyStruct(void)
 
                 if (isOmniscient)
                 {
-                    gAiPartyData->mons[trainer][monIndex].item = GetMonData(mon, MON_DATA_HELD_ITEM);
-                    gAiPartyData->mons[trainer][monIndex].heldEffect = GetItemHoldEffect(gAiPartyData->mons[trainer][monIndex].item);
                     gAiPartyData->mons[trainer][monIndex].ability = GetMonAbility(mon);
                     for (u32 moveIndex = 0; moveIndex < MAX_MON_MOVES; moveIndex++)
                         gAiPartyData->mons[trainer][monIndex].moves[moveIndex] = GetMonData(mon, MON_DATA_MOVE1 + moveIndex);

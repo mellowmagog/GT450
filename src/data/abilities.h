@@ -2472,4 +2472,35 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .name = _("Spicy Spray"),
         .description = COMPOUND_STRING("Burns the foe when damaged."),
     },
+	
+	    [ABILITY_TOXIC_WASTE] =
+    {
+        .name = _("Toxic Waste"),
+        .description = COMPOUND_STRING("Moves can poison."),
+        .aiRating = 8,
+    },
+	
+	    [ABILITY_ONE_FOR_ALL] =
+    {
+        .name = _("One For All"),
+        .description = COMPOUND_STRING("KOs raise Attack."),
+        .aiRating = 7,
+    },
+	
+	    [ABILITY_SUBWOOFER] =
+    {
+        .name = _("Subwoofer"),
+        .description = COMPOUND_STRING("Ups and resists sound."),
+        .aiRating = 2,
+        .breakable = TRUE,
+    },
+	
+	    [ABILITY_THICK_VINES] =
+    {
+        .name = _("Thick Vines"),
+        .description = COMPOUND_STRING("Tougher but flammable."),
+        .aiRating = 5,
+        .breakable = TRUE,
+    },
+	
 };

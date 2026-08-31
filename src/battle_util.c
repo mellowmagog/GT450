@@ -3597,7 +3597,6 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                     SetHealAmount(battler, GetNonDynamaxMaxHP(battler) / 16);
                     effect++;
                 }
-                break;
             case ABILITY_DRY_SKIN:
                 if (IsBattlerWeatherAffected(GetBattlerHoldEffect(battler), GetWeather(), B_WEATHER_SUN))
                     goto SOLAR_POWER_HP_DROP;
@@ -4177,6 +4176,22 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
                 effect++;
             }
             break;
+        case ABILITY_ICE_BODY:
+			if (IsBattlerAlive(gBattlerAttacker)
+			&& !gSpecialStatuses[gBattlerAttacker].attackerInParty
+			&& IsBattlerTurnDamaged(gBattlerTarget, EXCLUDING_SUBSTITUTES)
+			&& !CanBattlerAvoidContactEffects(gBattlerAttacker, gBattlerTarget, GetBattlerAbility(gBattlerAttacker), GetBattlerHoldEffect(gBattlerAttacker), move)
+			&& CanGetFrostbite(gBattlerTarget, gBattlerAttacker, GetBattlerAbility(gBattlerAttacker))
+			&& (GetConfig(B_ABILITY_TRIGGER_CHANCE) >= GEN_4 ? RandomPercentage(RNG_FLAME_BODY, 30) : RandomChance(RNG_FLAME_BODY, 1, 3)))
+			{
+				gEffectBattler = gBattlerAttacker;
+				gBattleScripting.battler = gBattlerTarget;
+				gBattleScripting.moveEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE;
+				PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+				BattleScriptCall(BattleScript_AbilityStatusEffect);
+				effect++;
+			}
+			break;			
         case ABILITY_CUTE_CHARM:
             if (IsBattlerAlive(gBattlerAttacker)
              && !gSpecialStatuses[gBattlerAttacker].attackerInParty
@@ -4348,6 +4363,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
             }
             break;
         case ABILITY_TOXIC_CHAIN:
+		case ABILITY_TOXIC_WASTE:
             if (gBattleStruct->toxicChainPriority)
             {
                 gBattleStruct->toxicChainPriority = FALSE;
@@ -4522,6 +4538,7 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         case ABILITY_GRIM_NEIGH:
         case ABILITY_AS_ONE_SHADOW_RIDER:
         case ABILITY_BEAST_BOOST:
+		case ABILITY_ONE_FOR_ALL:
             {
                 if (NoAliveMonsForEitherParty())
                     break;
@@ -6610,6 +6627,7 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageContext *ctx)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
     case ABILITY_PUNK_ROCK:
+	case ABILITY_SUBWOOFER:
         if (IsSoundMove(move))
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
         break;
@@ -7480,6 +7498,7 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct DamageContext *ctx)
         }
         break;
     case ABILITY_FLUFFY:
+	case ABILITY_THICK_VINES:
         if (ctx->moveType == TYPE_FIRE && !IsMoveMakingContact(ctx->battlerAtk, ctx->battlerDef, ctx->abilities[ctx->battlerAtk], ctx->holdEffects[ctx->battlerAtk], ctx->move))
         {
             modifier = UQ_4_12(2.0);
@@ -7492,6 +7511,7 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct DamageContext *ctx)
         }
         break;
     case ABILITY_PUNK_ROCK:
+	case ABILITY_SUBWOOFER:
         if (IsSoundMove(ctx->move))
         {
             modifier = UQ_4_12(0.5);
@@ -10017,7 +10037,7 @@ bool32 TrySwitchInEjectPack(enum EjectPackTiming timing)
 
 bool32 EmergencyExitCanBeTriggered(enum BattlerId battler, enum Ability ability)
 {
-    if (ability != ABILITY_EMERGENCY_EXIT && ability != ABILITY_WIMP_OUT)
+    if (ability != ABILITY_EMERGENCY_EXIT && ability != ABILITY_WIMP_OUT && ability != ABILITY_RUN_AWAY)
         return FALSE;
 
     if (IsBattlerAlive(battler)

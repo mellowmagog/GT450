@@ -993,6 +993,22 @@ Route104_EventScript_Darian::
 	trainerbattle_single TRAINER_DARIAN, Route104_Text_DarianIntro, Route104_Text_DarianDefeat
 	msgbox Route104_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end
+	
+Route104_EventScript_BerryShopClosedDoor::
+	face_right
+	goto Route104_EventScript_BerryShopClosed
+	end
+	
+Route104_EventScript_BerryShopClosed::
+	msgbox Route104_Text_BerryShopClosed, MSGBOX_DEFAULT
+	release
+	end
+	
+Route104_Text_BerryShopClosed:
+	.string "There is a sign on the door.\p"
+	.string "This flower shop is currently\n"
+	.string "closed and under investigation\p"
+	.string "for shiny POKéMON smuggling.$"
 
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"

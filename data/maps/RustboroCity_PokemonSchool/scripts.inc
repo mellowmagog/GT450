@@ -87,6 +87,8 @@ RustboroCity_PokemonSchool_EventScript_Teacher::
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	setflag FLAG_RECEIVED_QUICK_CLAW
+	setflag FLAG_RECEIVED_SECRET_POWER
+	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	release
 	end
 

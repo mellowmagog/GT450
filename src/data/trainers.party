@@ -235,7 +235,7 @@ AI: Smart Trainer
 
 Poochyena
 Level: 12
-Ability: Intimidate
+Ability: Run Away
 - Bite
 - Swagger
 - Scary Face
@@ -345,10 +345,10 @@ Double Battle: No
 AI: Smart Trainer
 
 Nickit
-Level: 13
+Level: 14
 
 Zubat
-Level: 13
+Level: 14
 
 Frillish
 Level: 14
@@ -1072,13 +1072,46 @@ Music: Girl
 Double Battle: No
 AI: Smart Trainer
 
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Chinchou
+Level: 16
+Ability: Volt Absorb
+Nature: Modest
+- Discharge
+- Bubble Beam
 
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Clamperl @ Deep Sea Tooth
+Level: 16
+Ability: Shell Armor
+Nature: Modest
+- Whirlpool
+- Shell Smash
+- Body Slam
+
+=== TRAINER_CHANDLER ===
+Name: CHANDLER
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Smart Trainer
+
+Wooper Paldea
+Level: 16
+Ability: Water Absorb
+Nature: Sassy
+- Poison Tail
+- Bubble
+- Dig
+
+Tandemaus @ Focus Band
+Level: 16
+Ability: Own Tempo
+Nature: Impish
+- Follow Me
+- Helping Hand
+- Bullet Seed
+- Super Fang
 
 === TRAINER_AUSTINA ===
 Name: AUSTINA
@@ -2201,6 +2234,7 @@ Level: 12
 
 Espurr
 Level: 13
+Shiny: Yes
 - Pay Day
 
 === TRAINER_DAPHNE ===
@@ -2614,6 +2648,7 @@ Level: 13
 
 Mankey
 Level: 13
+Shiny: Yes
 - Pay Day
 
 === TRAINER_MOLLIE ===
@@ -4908,6 +4943,7 @@ Carbink @ Liechi Berry
 Level: 13
 Ability: Clear Body
 Nature: Quiet
+Shiny: Yes
 - Charm
 - Accelerock
 - Draining Kiss
@@ -6420,6 +6456,11 @@ AI: Smart Trainer
 
 Taillow
 Level: 9
+Ability: Guts
+Nature: Jolly
+- Sand Attack
+- Quick Attack
+- Peck
 
 Lechonk
 Level: 9
@@ -6429,7 +6470,7 @@ Level: 10
 Ability: Moody
 Ball: Premier
 Nature: Impish
-- Sand Attack
+- Mud Slap
 - Yawn
 - Curse
 - Tackle
@@ -9079,9 +9120,19 @@ Level: 12
 
 Marill
 Level: 12
+Ability: Huge Power
+Nature: Adamant
+- Draining Kiss
+- Helping Hand
+- Bubble
 
 Fidough
 Level: 12
+Ability: Cute Charm
+Nature: Impish
+- Lick
+- Bark
+- Bite
 
 === TRAINER_MIU_AND_YUKI ===
 Name: MIU & YUKI
@@ -9231,9 +9282,30 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Wingull
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pancham
+Level: 18
+Ability: Mold Breaker
+Nature: Impish
+- Grass Whistle
+- Brick Break
+- Taunt
+
+=== TRAINER_HAILEY ===
+Name: HAILEY
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Smart Trainer
+
+Horsea
+Level: 18
+Ability: Sniper
+Nature: Timid
+- Focus Energy
+- Dragon Breath
+- Bubble Beam
 
 === TRAINER_ERNEST_1 ===
 Name: ERNEST
@@ -9258,7 +9330,7 @@ Class: Sailor
 Pic: Sailor
 Gender: Male
 Music: Male
-Double Battle: No
+Double Battle: Yes
 AI: Smart Trainer
 
 Lunatone @ Damp Rock
@@ -9279,8 +9351,17 @@ Nature: Brave
 - Swords Dance
 - Leech Seed
 
+Lombre @ Lax Incense
+Level: 17
+Ability: Rain Dish
+Nature: Impish
+- Fake Out
+- Leech Seed
+- Trailblaze
+- Teeter Dance
+
 Clobbopus @ Binding Band
-Level: 18
+Level: 17
 Ability: Technician
 Nature: Adamant
 - Whirlpool
@@ -10875,7 +10956,7 @@ Ability: Static
 Nature: Timid
 - Electro Ball
 - Electroweb
-- Trailblaze
+- Fire Punch
 - Low Kick
 
 Combusken @ Sitrus Berry
@@ -10883,7 +10964,7 @@ Level: 17
 Ability: Speed Boost
 Nature: Adamant
 - Bounce
-- Fire Punch
+- Flame Charge
 - Upper Hand
 - Substitute
 
@@ -11158,48 +11239,57 @@ Double Battle: No
 AI: Smart Trainer
 
 Wattrel @ Magnet
-Level: 14
+Level: 16
 Ability: Competitive
-Nature: Jolly
+Nature: Timid
 - Volt Switch
-- Pluck
+- Round
 - Thunder Wave
 - Feather Dance
 
 Zorua Hisui @ Spell Tag
-Level: 15
+Level: 17
 Nature: Modest
 - Swift
 - Snarl
 - Hex
 - U-turn
 
-Fuecoco @ Sitrus Berry
-Level: 15
+Nickit @ Red Card
+Level: 17
+Ability: Stakeout
+Nature: Quiet
+- Will-o-wisp
+- Swift
+- Snarl
+- Roar
+
+Crocalor @ Sitrus Berry
+Level: 17
 Ability: Flame Body
 Nature: Relaxed
-- Incinerate
-- Snarl
+- Fire Spin
+- Lick
 - Yawn
 - Slack Off
 
-Tangela @ Chesto Berry
-Level: 15
-Ability: Regenerator
-Nature: Modest
-- Poison Powder
-- Ancient Power
-- Mega Drain
+Exeggcute @ Chesto Berry
+Level: 17
+Ability: Harvest
+Nature: Calm
+- Stun Spore
+- Psywave
+- Seed Flare
 - Rest
 
-Shellder @ Ganlon Berry
-Level: 15
+Shellder @ Assault Vest
+Level: 17
 Ability: Skill Link
 Nature: Impish
 - Icicle Spear
 - Whirlpool
-- Withdraw
 - Chilling Water
+- Ice Shard
 
 === TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
 Name: BRENDAN
@@ -11208,51 +11298,15 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
-
-Wattrel @ Magnet
-Level: 14
-Ability: Competitive
-Nature: Jolly
-- Volt Switch
-- Pluck
-- Thunder Wave
-- Feather Dance
+AI: Basic Trainer / Prefer Status Moves
 
 Zorua Hisui @ Spell Tag
-Level: 15
+Level: 16
 Nature: Modest
 - Swift
 - Snarl
 - Hex
 - U-turn
-
-Fuecoco @ Sitrus Berry
-Level: 15
-Ability: Flame Body
-Nature: Relaxed
-- Incinerate
-- Snarl
-- Yawn
-- Slack Off
-
-Tangela @ Chesto Berry
-Level: 15
-Ability: Regenerator
-Nature: Modest
-- Poison Powder
-- Ancient Power
-- Mega Drain
-- Rest
-
-Shellder @ Ganlon Berry
-Level: 15
-Ability: Skill Link
-Nature: Impish
-- Icicle Spear
-- Whirlpool
-- Withdraw
-- Chilling Water
 
 === TRAINER_PAXTON ===
 Name: PAXTON
@@ -11351,51 +11405,15 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Smart Trainer
-
-Wattrel @ Magnet
-Level: 14
-Ability: Competitive
-Nature: Jolly
-- Volt Switch
-- Pluck
-- Thunder Wave
-- Feather Dance
+AI: Basic Trainer / Prefer Status Moves
 
 Zorua Hisui @ Spell Tag
-Level: 15
+Level: 16
 Nature: Modest
 - Swift
 - Snarl
 - Hex
 - U-turn
-
-Fuecoco @ Sitrus Berry
-Level: 15
-Ability: Flame Body
-Nature: Relaxed
-- Incinerate
-- Snarl
-- Yawn
-- Slack Off
-
-Tangela @ Chesto Berry
-Level: 15
-Ability: Regenerator
-Nature: Modest
-- Poison Powder
-- Ancient Power
-- Mega Drain
-- Rest
-
-Shellder @ Ganlon Berry
-Level: 15
-Ability: Skill Link
-Nature: Impish
-- Icicle Spear
-- Whirlpool
-- Withdraw
-- Chilling Water
 
 === TRAINER_MAY_RUSTBORO_MUDKIP ===
 Name: MAY
@@ -11404,51 +11422,15 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
-
-Wattrel @ Magnet
-Level: 14
-Ability: Competitive
-Nature: Jolly
-- Volt Switch
-- Pluck
-- Thunder Wave
-- Feather Dance
+AI: Basic Trainer / Prefer Status Moves
 
 Zorua Hisui @ Spell Tag
-Level: 15
+Level: 16
 Nature: Modest
 - Swift
 - Snarl
 - Hex
 - U-turn
-
-Fuecoco @ Sitrus Berry
-Level: 15
-Ability: Flame Body
-Nature: Relaxed
-- Incinerate
-- Snarl
-- Yawn
-- Slack Off
-
-Tangela @ Chesto Berry
-Level: 15
-Ability: Regenerator
-Nature: Modest
-- Poison Powder
-- Ancient Power
-- Mega Drain
-- Rest
-
-Shellder @ Ganlon Berry
-Level: 15
-Ability: Skill Link
-Nature: Impish
-- Icicle Spear
-- Whirlpool
-- Withdraw
-- Chilling Water
 
 === TRAINER_MAXIE_MAGMA_HIDEOUT ===
 Name: MAXIE
@@ -11556,7 +11538,7 @@ Nature: Adamant
 
 Whismur @ Chesto Berry
 Level: 17
-Ability: Punk Rock
+Ability: Subwoofer
 Nature: Impish
 - Echoed Voice
 - Rest
@@ -11732,10 +11714,13 @@ AI: Smart Trainer
 Wurmple
 Level: 8
 
-
 Ledyba
 Level: 9
-
+Ability: Iron Fist
+Nature: Adamant
+- Mach Punch
+- Comet Punch
+- Supersonic
 
 === TRAINER_LYLE ===
 Name: LYLE
@@ -11766,7 +11751,7 @@ Ability: Iron Fist
 
 Pineco
 Level: 10
-- Self-Destruct
+- New Self Destruct
 
 Spewpa
 Level: 11
@@ -12356,13 +12341,13 @@ Nature: Bold
 - Psywave
 - Moonlight
 
-Beautifly @ Clear Amulet
+Beautifly @ Iron Ball
 Level: 18
 Ability: Tinted Lens
 Nature: Modest
 - Expanding Force
 - Air Cutter
-- Silver Wind
+- String Shot
 - Quiver Dance
 
 Ponyta Galar @ Insect Plate
@@ -13485,6 +13470,7 @@ Ability: Run Away
 Nidorino
 Level: 16
 Ability: Rivalry
+Shiny: Yes
 - Pay Day
 
 === TRAINER_SARAH ===
@@ -13516,6 +13502,7 @@ Ability: Cute Charm
 Nidorina
 Level: 16
 Ability: Rivalry
+Shiny: Yes
 - Pay Day
 
 === TRAINER_DARIAN ===
@@ -13531,40 +13518,11 @@ Staryu
 Level: 12
 Ability: Magic Bounce
 Nature: Modest
+Shiny: Yes
 - Bubblebeam
 - Psybeam
 - Power Gem
 - Recover
-
-=== TRAINER_HAILEY ===
-Name: HAILEY
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Smart Trainer
-
-Marill
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CHANDLER ===
-Name: CHANDLER
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Smart Trainer
-
-Tentacool
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Tentacool
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KALEB ===
 Name: KALEB
@@ -14432,13 +14390,17 @@ Music: Male
 Double Battle: No
 AI: Smart Trainer
 
-Shroomish
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ekans
+Level: 13
+- Glare
+- Poison Sting
+- Wrap
 
-Lotad
-Level: 8
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Timburr
+Level: 13
+- Low Kick
+- Rock Throw
+- Scary Face
 
 === TRAINER_MELINA ===
 Name: MELINA
@@ -14685,48 +14647,57 @@ Double Battle: No
 AI: Smart Trainer
 
 Wattrel @ Magnet
-Level: 14
+Level: 16
 Ability: Competitive
-Nature: Jolly
+Nature: Timid
 - Volt Switch
-- Pluck
+- Round
 - Thunder Wave
 - Feather Dance
 
 Zorua Hisui @ Spell Tag
-Level: 15
+Level: 17
 Nature: Modest
 - Swift
 - Snarl
 - Hex
 - U-turn
 
-Fuecoco @ Sitrus Berry
-Level: 15
+Nickit @ Red Card
+Level: 17
+Ability: Stakeout
+Nature: Quiet
+- Will-o-wisp
+- Swift
+- Snarl
+- Roar
+
+Crocalor @ Sitrus Berry
+Level: 17
 Ability: Flame Body
 Nature: Relaxed
-- Incinerate
-- Snarl
+- Fire Spin
+- Lick
 - Yawn
 - Slack Off
 
-Tangela @ Chesto Berry
-Level: 15
-Ability: Regenerator
-Nature: Modest
-- Poison Powder
-- Ancient Power
-- Mega Drain
+Exeggcute @ Chesto Berry
+Level: 17
+Ability: Harvest
+Nature: Calm
+- Stun Spore
+- Psywave
+- Seed Flare
 - Rest
 
-Shellder @ Ganlon Berry
-Level: 15
+Shellder @ Assault Vest
+Level: 17
 Ability: Skill Link
 Nature: Impish
 - Icicle Spear
 - Whirlpool
-- Withdraw
 - Chilling Water
+- Ice Shard
 
 === TRAINER_MAY_RUSTBORO_TORCHIC ===
 Name: MAY
@@ -14735,51 +14706,15 @@ Pic: May
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Smart Trainer
-
-Wattrel @ Magnet
-Level: 14
-Ability: Competitive
-Nature: Jolly
-- Volt Switch
-- Pluck
-- Thunder Wave
-- Feather Dance
+AI: Basic Trainer / Prefer Status Moves
 
 Zorua Hisui @ Spell Tag
-Level: 15
+Level: 16
 Nature: Modest
 - Swift
 - Snarl
 - Hex
 - U-turn
-
-Fuecoco @ Sitrus Berry
-Level: 15
-Ability: Flame Body
-Nature: Relaxed
-- Incinerate
-- Snarl
-- Yawn
-- Slack Off
-
-Tangela @ Chesto Berry
-Level: 15
-Ability: Regenerator
-Nature: Modest
-- Poison Powder
-- Ancient Power
-- Mega Drain
-- Rest
-
-Shellder @ Ganlon Berry
-Level: 15
-Ability: Skill Link
-Nature: Impish
-- Icicle Spear
-- Whirlpool
-- Withdraw
-- Chilling Water
 
 === TRAINER_ROXANNE_2 ===
 Name: ROXANNE

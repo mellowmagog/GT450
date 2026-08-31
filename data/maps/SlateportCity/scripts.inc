@@ -912,9 +912,8 @@ SlateportCity_Movement_ScottExitAfterBattleTent:
 	step_end
 
 SlateportCity_EventScript_BerryCrushRankingsSign::
-	lockall
-	special ShowBerryCrushRankings
-	releaseall
+	msgbox SlateportCity_Text_DontHaveEnoughBerryPowder, MSGBOX_DEFAULT
+	release
 	end
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
@@ -1289,8 +1288,11 @@ SlateportCity_Text_ExchangeBerryPowderForItem:
 	.string "BERRY POWDER for one {STR_VAR_1}?$"
 
 SlateportCity_Text_DontHaveEnoughBerryPowder:
-	.string "Oh, dear. You don't have enough\n"
-	.string "BERRY POWDER.$"
+	.string "       WARNING!\p"
+	.string "If you purchased BERRY\n"
+	.string "POWDER from this vendor please\p"
+	.string "contact SLATEPORT police force\n"
+	.string "       IMMEADIATELY!$"
 
 SlateportCity_Text_FineBerryPowderTradeSomethingElse:
 	.string "This is fine BERRY POWDER.\n"

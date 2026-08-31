@@ -824,7 +824,7 @@ RustboroCity_EventScript_RivalEncounter::
 	end
 
 RustboroCity_EventScript_MayEncounter::
-	goto_if_set FLAG_DEFEATED_RIVAL_RUSTBORO, RustboroCity_EventScript_MayBrineyHint
+	goto_if_set FLAG_DEFEATED_RIVAL_RUSTBORO, RustboroCity_EventScript_May_Rival_Item
 	goto_if_set FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_MayAskToBattle
 	setflag FLAG_MET_RIVAL_RUSTBORO
 	msgbox RustboroCity_Text_MayHiLetsRegister, MSGBOX_DEFAULT
@@ -856,10 +856,7 @@ RustboroCity_EventScript_MayAskToBattle::
 
 RustboroCity_EventScript_BattleMay::
 	msgbox RustboroCity_Text_MayImNotGoingToLose, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, RustboroCity_EventScript_BattleMayTreecko
-	case 1, RustboroCity_EventScript_BattleMayTorchic
-	case 2, RustboroCity_EventScript_BattleMayMudkip
+	call RustboroCity_EventScript_BattleMayTreecko
 	end
 
 RustboroCity_EventScript_MayBrineyHint::
@@ -892,7 +889,7 @@ RustboroCity_EventScript_BattleMayMudkip::
 	end
 
 RustboroCity_EventScript_BrendanEncounter::
-	goto_if_set FLAG_DEFEATED_RIVAL_RUSTBORO, RustboroCity_EventScript_BrendanBrineyHint
+	goto_if_set FLAG_DEFEATED_RIVAL_RUSTBORO, RustboroCity_EventScript_Brendan_Rival_Item
 	goto_if_set FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_BrendanAskToBattle
 	setflag FLAG_MET_RIVAL_RUSTBORO
 	msgbox RustboroCity_Text_BrendanHiLetsRegister, MSGBOX_DEFAULT
@@ -922,10 +919,7 @@ RustboroCity_EventScript_BrendanAskToBattle::
 
 RustboroCity_EventScript_BattleBrendan::
 	msgbox RustboroCity_Text_BrendanIWontGoEasy, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, RustboroCity_EventScript_BattleBrendanTreecko
-	case 1, RustboroCity_EventScript_BattleBrendanTorchic
-	case 2, RustboroCity_EventScript_BattleBrendanMudkip
+	call RustboroCity_EventScript_BattleBrendanTreecko
 	end
 
 RustboroCity_EventScript_BrendanBrineyHint::
@@ -1288,3 +1282,167 @@ RustboroCity_Text_YouCanHave2On2Battle:
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+RustboroCity_EventScript_Brendan_Rival_Item::
+	goto_if_set FLAG_RIVAL_ITEM_1, RustboroCity_EventScript_BrendanBrineyHint
+	setflag FLAG_RIVAL_ITEM_1
+	msgbox RustboroCity_Text_Rival_Item, MSGBOX_DEFAULT
+	giveitem ITEM_COVERT_CLOAK
+	releaseall
+	end
+	
+RustboroCity_EventScript_May_Rival_Item::
+	goto_if_set FLAG_RIVAL_ITEM_1, RustboroCity_EventScript_MayBrineyHint
+	setflag FLAG_RIVAL_ITEM_1
+	msgbox RustboroCity_Text_Rival_Item, MSGBOX_DEFAULT
+	giveitem ITEM_COVERT_CLOAK
+	releaseall
+	end	
+
+RustboroCity_Text_Rival_Item:
+	.string "You can also have this, since you beat\n"
+	.string "me this time.$"
+
+.equ MAGIKARP_PRICE, 30000
+
+Route4_PokemonCenter_1F_EventScript_MagikarpSalesman::
+	lock
+	faceplayer
+	goto_if_set FLAG_BOUGHT_MAGIKARP, Route4_PokemonCenter_1F_EventScript_AlreadyBoughtMagikarp
+	showmoneybox 0, 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route4_PokemonCenter_1F_EventScript_AskBuyMagikarpMale
+	goto_if_eq VAR_RESULT, FEMALE, Route4_PokemonCenter_1F_EventScript_AskBuyMagikarpFemale
+	end
+
+Route4_PokemonCenter_1F_EventScript_AskBuyMagikarpMale::
+	msgbox Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500, MSGBOX_YESNO
+	goto Route4_PokemonCenter_1F_EventScript_TryBuyMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_AskBuyMagikarpFemale::
+	msgbox Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500, MSGBOX_YESNO
+	goto Route4_PokemonCenter_1F_EventScript_TryBuyMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_TryBuyMagikarp::
+	goto_if_eq VAR_RESULT, NO, Route4_PokemonCenter_1F_EventScript_DeclineMagikarp
+	checkmoney MAGIKARP_PRICE
+	goto_if_eq VAR_RESULT, FALSE, Route4_PokemonCenter_1F_EventScript_NotEnoughMoney
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	setvar VAR_TEMP_1, SPECIES_MAGIKARP
+	givemon SPECIES_MAGIKARP, 5
+	goto_if_eq VAR_RESULT, 0, Route4_PokemonCenter_1F_EventScript_BuyMagikarpParty
+	goto_if_eq VAR_RESULT, 1, Route4_PokemonCenter_1F_EventScript_BuyMagikarpPC
+	goto_if_eq VAR_RESULT, 2, Route4_PokemonCenter_1F_EventScript_NoRoomForMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_BuyMagikarpParty::
+	call Route4_PokemonCenter_1F_EventScript_PayForMagikarp
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route4_PokemonCenter_1F_EventScript_EndPurchaseMagikarp
+	call Common_EventScript_GetGiftMonPartySlot
+	fadescreen FADE_TO_BLACK
+	hidemoneybox
+	special ChangePokemonNickname
+	goto Route4_PokemonCenter_1F_EventScript_BoughtMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_BuyMagikarpPC::
+	call Route4_PokemonCenter_1F_EventScript_PayForMagikarp
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route4_PokemonCenter_1F_EventScript_TransferMagikarpCloseMoneyBox
+	fadescreen FADE_TO_BLACK
+	hidemoneybox
+	special ChangePokemonNickname
+	lock
+	faceplayer
+	goto Route4_PokemonCenter_1F_EventScript_TransferMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_TransferMagikarpCloseMoneyBox::
+	call Common_EventScript_TransferredToPC
+	goto Route4_PokemonCenter_1F_EventScript_EndPurchaseMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_TransferMagikarp::
+	call Common_EventScript_TransferredToPC
+	goto Route4_PokemonCenter_1F_EventScript_BoughtMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_EndPurchaseMagikarp::
+	hidemoneybox
+	goto Route4_PokemonCenter_1F_EventScript_BoughtMagikarp
+	end
+
+Route4_PokemonCenter_1F_EventScript_BoughtMagikarp::
+	setflag FLAG_BOUGHT_MAGIKARP
+	release
+	end
+
+Route4_PokemonCenter_1F_EventScript_PayForMagikarp::
+	removemoney MAGIKARP_PRICE
+	updatemoneybox
+	playfanfare MUS_LEVEL_UP
+	message Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MAGIKARP
+	return
+
+Route4_PokemonCenter_1F_EventScript_DeclineMagikarp::
+	msgbox Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou
+	hidemoneybox
+	release
+	end
+
+Route4_PokemonCenter_1F_EventScript_NotEnoughMoney::
+	msgbox Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney
+	hidemoneybox
+	release
+	end
+
+Route4_PokemonCenter_1F_EventScript_AlreadyBoughtMagikarp::
+	msgbox Route4_PokemonCenter_1F_Text_IDontGiveRefunds
+	release
+	end
+
+Route4_PokemonCenter_1F_EventScript_NoRoomForMagikarp::
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon
+	hidemoneybox
+	release
+	end
+
+Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500::
+	.string "MAN: Hello there, laddie!\n"
+	.string "Have I got a deal just for you!\p"
+	.string "I'll let you have a secret POKéMON\n"
+	.string "- a MAGIKARP - for just ¥500!\p"
+	.string "So, you'll buy it, am I right?$"
+
+Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500::
+	.string "MAN: Hello there, sweetie pie!\n"
+	.string "Have I got a deal just for you!\p"
+	.string "I'll let you have a secret POKéMON\n"
+	.string "- a MAGIKARP - for just ¥500!\p"
+	.string "So, you'll buy it, am I right?$"
+
+Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp::
+	.string "{PLAYER} paid an outrageous ¥500\n"
+	.string "and bought the MAGIKARP…$"
+
+Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::
+	.string "No? You say no? I'm only doing this\n"
+	.string "as a favor to you!$"
+
+Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon::
+	.string "There's no more room for any more\n"
+	.string "POKéMON, it looks like.$"
+
+Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney::
+	.string "You'll need more money than that!$"
+
+Route4_PokemonCenter_1F_Text_IDontGiveRefunds::
+	.string "MAN: Well, I don't give refunds.\n"
+	.string "You knew what you were getting!$"
